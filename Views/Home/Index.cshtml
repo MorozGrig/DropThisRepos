@@ -2,7 +2,71 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <div class="container">
+        <h1 class="hero-section h1 text-center">Эксклюзивные украшения</h1>
+        <p class="text-center">Золото, серебро, платина. Индивидуальный подход</p>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="mb-4 text-center">Новинки каталога</h2>
+    <div class="row">
+        <!-- Товар 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="ring1.jpg" class="card-img-top" alt="Золотое кольцо">
+                <div class="card-body">
+                    <h5 class="card-title">Золотое кольцо</h5>
+                    <p class="card-text text-muted">Золото 585 • Кольца</p>
+                    <h4 class="text-danger">25 000 ₽</h4>
+                    <button onclick="window.location.href='/Home/Product/1'"
+                            class="btn btn-primary w-100 mb-2">
+                        Подробнее
+                    </button>
+                    <button onclick="addToCart(1)" class="btn btn-success w-100">
+                        <i class="fas fa-shopping-cart"></i> В корзину
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Товар 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/earrings1.jpg" class="card-img-top" alt="Серебряные серьги">
+                <div class="card-body">
+                    <h5 class="card-title">Серебряные серьги</h5>
+                    <p class="card-text text-muted">Серебро 925 • Серьги</p>
+                    <h4 class="text-danger">4 500 ₽</h4>
+                    <button onclick="window.location.href='/Home/Product/2'"
+                            class="btn btn-primary w-100 mb-2">
+                        Подробнее
+                    </button>
+                    <button onclick="addToCart(2)" class="btn btn-success w-100">
+                        <i class="fas fa-shopping-cart"></i> В корзину
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Товар 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/bracelet1.jpg" class="card-img-top" alt="Платиновый браслет">
+                <div class="card-body">
+                    <h5 class="card-title">Платиновый браслет</h5>
+                    <p class="card-text text-muted">Платина 950 • Браслеты</p>
+                    <h4 class="text-danger">85 000 ₽</h4>
+                    <button onclick="window.location.href='/Home/Product/3'"
+                            class="btn btn-primary w-100 mb-2">
+                        Подробнее
+                    </button>
+                    <button onclick="addToCart(3)" class="btn btn-success w-100">
+                        <i class="fas fa-shopping-cart"></i> В корзину
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
