@@ -38,7 +38,7 @@ namespace DropThisSite.Controllers
                 if (user.Role != null)
                     claims.Add(new Claim(ClaimTypes.Role, user.Role.NameRole ?? "User"));
 
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme)));
 
                 return RedirectToAction("Index", "Home");

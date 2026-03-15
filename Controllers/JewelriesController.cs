@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DropThisSite.Data;
+using DropThisSite.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using DropThisSite.Data;
-using DropThisSite.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace DropThisSite.Controllers
 {
@@ -19,9 +20,9 @@ namespace DropThisSite.Controllers
             _context = context;
         }
 
-        // GET: Jewelries
-        // ✅ КАТАЛОГ ДЛЯ ПОКУПАТЕЛЕЙ
-        public IActionResult Index(int? page = 1)
+            // GET: Jewelries
+            // ✅ КАТАЛОГ ДЛЯ ПОКУПАТЕЛЕЙ
+            public IActionResult Index(int? page = 1)
         {
             int pageSize = 12;
             var jewelry = _context.Jewelries

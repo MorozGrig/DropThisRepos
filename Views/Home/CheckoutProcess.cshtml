@@ -1,0 +1,23 @@
+﻿<div class="container my-5 text-center">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-warning">
+                <div class="card-body p-5">
+                    <i class="fas fa-check-circle text-success fa-5x mb-4"></i>
+                    <h2 class="text-success mb-4">Заказ успешно оформлен!</h2>
+                    <h4 class="text-warning mb-4">Товаров: @ViewBag.OrderCount шт.</h4>
+                    <p class="lead mb-4">Сумма: <strong>@ViewBag.TotalPrice ₽</strong></p>
+                    
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Заказы отправлены менеджеру!
+                    </div>
+                    
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg px-5">
+                        <i class="fas fa-home me-2"></i>На главную
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

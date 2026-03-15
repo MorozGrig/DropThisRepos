@@ -16,6 +16,10 @@ namespace DropThisSite.Models
         [StringLength(20)]
         public string? Password { get; set; }
 
+        [Required]
+        [Phone]
+        public string? Phone { get; set; }
+
         [EmailAddress]
         public string? Email { get; set; }
 

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DropThisSite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8bfcf1a4ec560be08538b13d448d8bee704cbd5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5592da4b589e8a37dddb204be609fbf91227597f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DropThisSite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DropThisSite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

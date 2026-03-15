@@ -59,7 +59,6 @@
         const btn = event.target.closest('button');
         const originalText = btn.innerHTML;
     
-        // АНИМАЦИЯ
         btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Добавляем...';
         btn.disabled = true;
 
@@ -69,7 +68,7 @@
 
             const response = await fetch('/Home/AddToCart', {
                 method: 'POST',
-                body: formData  // ✅ ПРОСТО FormData
+                body: formData 
             });
         
             const data = await response.json();

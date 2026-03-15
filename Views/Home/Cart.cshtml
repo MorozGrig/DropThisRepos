@@ -1,61 +1,168 @@
 ﻿@model List<DropThisSite.Models.Jewelry>
+
 <div class="container my-5">
-    <h2>🛒 Корзина (<span id="cartCount">@ViewBag.CartCount</span>)</h2>
-    
-    @if (Model.Any())
-    {
-        <div class="table-responsive">
-            <table class="table table-hover">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Товар</th>
-                        <th class="text-end">Цена</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>
-                                <strong>@item.NameJewelry</strong>
-                                <br><small>@item.JewelryTip?.NameJewelryTip</small>
-                            </td>
-                            <td class="text-end fs-4 fw-bold text-danger">@item.PriceJewelry.ToString("N0") ₽</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-danger"
-                                        onclick="removeFromCart(@item.IdJewelry)">
-                                    <i class="fas fa-trash"></i> Удалить
-                                </button>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <h1 class="mb-5 text-center text-warning">
+                <i class="fas fa-shopping-cart me-3"></i>Ваша корзина
+            </h1>
+
+            @if (!Model.Any())
+            {
+                <div class="text-center py-5 my-5">
+                    <i class="fas fa-shopping-cart fa-4x text-muted mb-4"></i>
+                    <h3 class="text-muted mb-4">Корзина пуста</h3>
+                    <a asp-controller="Jewelries" asp-action="Index" class="btn btn-warning btn-lg px-5">
+                        <i class="fas fa-gem me-2"></i>В каталог
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive mb-5">
+                    <table class="table table-hover shadow-sm">
+                        <thead class="table-warning">
+                            <tr>
+                                <th width="60"></th>
+                                <th>Товар</th>
+                                <th width="120" class="text-end">Цена</th>
+                                <th width="180" class="text-center">Количество</th>
+                                <th width="140" class="text-end">Сумма</th>
+                                <th width="80"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.DistinctBy(x => x.IdJewelry))
+                            {
+                                <tr data-product-id="@item.IdJewelry" data-price="@item.PriceJewelry">
+                                    <td><i class="fas fa-gem fa-2x text-warning"></i></td>
+                                    <td>
+                                        <h6>@item.NameJewelry</h6>
+                                        <small>
+                                            @item.Material?.NameMaterial
+                                            @if (item.Stone != null)
+                                            {
+                                                <text>• @item.Stone.ColorStone</text>
+                                            }
+                                        </small>
+                                    </td>
+                                    <td class="text-end">
+                                        <strong class="h6">@item.PriceJewelry ₽</strong>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="input-group input-group-sm w-75 mx-auto">
+                                            <button class="btn btn-outline-secondary qty-minus" data-id="@item.IdJewelry">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                            <input type="text" class="form-control qty-input text-center fw-bold"
+                                                   id="qty_@item.IdJewelry" value="1" readonly>
+                                            <button class="btn btn-outline-secondary qty-plus" data-id="@item.IdJewelry">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="text-end">
+                                        <strong class="h4 text-warning row-total" id="total_@item.IdJewelry">
+                                            @item.PriceJewelry ₽
+                                        </strong>
+                                    </td>
+                                    <td>
+                                        <form asp-action="RemoveFromCart" method="post" style="display:inline;">
+                                            <input type="hidden" name="id" value="@item.IdJewelry" />
+                                            <button type="submit" class="btn btn-danger btn-sm p-2"
+                                                    onclick="return confirm('Удалить?')">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                        <!-- ✅ ИТОГО ВСЕЙ КОРЗИНЫ -->
+                        <tfoot class="table-warning">
+                            <tr class="table-active">
+                                <td colspan="3" class="text-end fw-bold h5">ИТОГО:</td>
+                                <td class="text-center h5 fw-bold">
+                                    <span id="totalItems">@Model.Count()</span> товаров
+                                </td>
+                                <td class="text-end h3 text-danger fw-bold">
+                                    <span id="grandTotal">@ViewBag.TotalPrice ₽</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a asp-controller="Jewelries" asp-action="Index" class="btn btn-outline-secondary me-md-2">
+                        <i class="fas fa-arrow-left me-2"></i>Продолжить покупки
+                    </a>
+                    <a asp-action="Checkout" class="btn btn-warning btn-lg px-5">
+                        <i class="fas fa-credit-card me-3"></i>
+                        <strong>Оформить заказ</strong>
+                    </a>
+                </div>
+            }
         </div>
-        <div class="text-end mt-4">
-            <a class="btn btn-success btn-lg">Оформить заказ</a>
-        </div>
-    }
-    else
-    {
-        <div class="text-center py-5">
-            <i class="fas fa-shopping-cart fa-5x text-muted mb-4"></i>
-            <h3>Корзина пуста</h3>
-        </div>
-    }
+    </div>
 </div>
 
 <script>
-    function removeFromCart(id) {
-        fetch('/Home/RemoveFromCart', {
-            method: 'POST',
-            headers: {'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()}
-        }, {jewelryId: id})
-        .then(r => r.json())
-        .then(data => {
-            if (data.count === 0) location.reload();
-            else $('#cartCount').text(data.count);
-        });
+    async function updateCart(id, quantity) {
+        try {
+            const response = await fetch('/Home/UpdateCartItem', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `id=${id}&quantity=${quantity}`
+            });
+        
+            const result = await response.json();
+        
+            // ✅ 1. ЦЕНА ЭТОЙ СТРОКИ
+            updateRowTotal(id, quantity);
+        
+            // ✅ 2. ИТОГО ВСЕЙ КОРЗИНЫ (все товары × их количества)
+            document.getElementById('totalItems').textContent = result.totalItems;
+            document.getElementById('grandTotal').textContent = result.totalPrice.toLocaleString() + ' ₽';
+        
+        } catch (error) {
+            console.error('Ошибка корзины');
+        }
     }
+
+    function updateRowTotal(id, qty) {
+        const row = document.querySelector(`[data-product-id="${id}"]`);
+        const price = parseFloat(row.dataset.price);
+        const total = price * qty;
+        document.getElementById('total_' + id).textContent = total.toLocaleString() + ' ₽';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.qty-plus').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const id = this.dataset.id;
+                const input = document.getElementById('qty_' + id);
+                let qty = parseInt(input.value) + 1;
+                if (qty > 99) qty = 99;
+            
+                input.value = qty;
+                updateRowTotal(id, qty);
+                updateCart(id, qty);
+            });
+        });
+    
+        document.querySelectorAll('.qty-minus').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const id = this.dataset.id;
+                const input = document.getElementById('qty_' + id);
+                let qty = parseInt(input.value) - 1;
+                if (qty < 1) qty = 1;
+            
+                input.value = qty;
+                updateRowTotal(id, qty);
+                updateCart(id, qty);
+            });
+        });
+    });
 </script>

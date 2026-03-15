@@ -14,7 +14,7 @@
     <div class="row">
         <!-- Товар 1 -->
         <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm border-warning">
                 <img src="ring1.jpg" class="card-img-top" alt="Золотое кольцо">
                 <div class="card-body">
                     <h5 class="card-title">Золотое кольцо</h5>
@@ -24,7 +24,7 @@
                             class="btn btn-primary w-100 mb-2">
                         Подробнее
                     </button>
-                    <button onclick="addToCart(1)" class="btn btn-success w-100">
+                    <button onclick="addToCart(1)" class="btn btn-success w-100 add-to-cart-btn">
                         <i class="fas fa-shopping-cart"></i> В корзину
                     </button>
                 </div>
@@ -33,7 +33,7 @@
 
         <!-- Товар 2 -->
         <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm border-warning">
                 <img src="/images/earrings1.jpg" class="card-img-top" alt="Серебряные серьги">
                 <div class="card-body">
                     <h5 class="card-title">Серебряные серьги</h5>
@@ -43,7 +43,7 @@
                             class="btn btn-primary w-100 mb-2">
                         Подробнее
                     </button>
-                    <button onclick="addToCart(2)" class="btn btn-success w-100">
+                    <button onclick="addToCart(2)" class="btn btn-success w-100 add-to-cart-btn">
                         <i class="fas fa-shopping-cart"></i> В корзину
                     </button>
                 </div>
@@ -52,7 +52,7 @@
 
         <!-- Товар 3 -->
         <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm border-warning">
                 <img src="/images/bracelet1.jpg" class="card-img-top" alt="Платиновый браслет">
                 <div class="card-body">
                     <h5 class="card-title">Платиновый браслет</h5>
@@ -62,7 +62,7 @@
                             class="btn btn-primary w-100 mb-2">
                         Подробнее
                     </button>
-                    <button onclick="addToCart(3)" class="btn btn-success w-100">
+                    <button onclick="addToCart(3)" class="btn btn-success w-100 add-to-cart-btn">
                         <i class="fas fa-shopping-cart"></i> В корзину
                     </button>
                 </div>
@@ -70,3 +70,62 @@
         </div>
     </div>
 </div>
+
+<!-- ✅ JavaScript для корзины -->
+<script>
+let addingToCart = false;
+
+async function addToCart(id) {
+    if (addingToCart) return;
+    addingToCart = true;
+    
+    const btn = event.target.closest('button');
+    const originalText = btn.innerHTML;
+    
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Добавляем...';
+    btn.disabled = true;
+
+    try {
+        const formData = new FormData();
+        formData.append('id', id);
+
+        const response = await fetch('/Home/AddToCart', {
+            method: 'POST',
+            body: formData
+        });
+        
+        const data = await response.json();
+        
+        // Обновляем счетчики корзины
+        const badges = document.querySelectorAll('#cartCount');
+        badges.forEach(badge => {
+            badge.textContent = data.count;
+            badge.style.display = data.count > 0 ? 'block' : 'none';
+        });
+        
+        btn.innerHTML = '<i class="fas fa-check me-2"></i>Добавлено!';
+        btn.classList.add('animate__animated', 'animate__tada');
+        
+    } catch(error) {
+        console.error('Ошибка:', error);
+        btn.innerHTML = '<i class="fas fa-exclamation me-2"></i>Ошибка';
+    }
+    
+    setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('animate__animated', 'animate__tada');
+        btn.disabled = false;
+        addingToCart = false;
+    }, 2000);
+}
+</script>
+
+<style>
+.add-to-cart-btn {
+    transition: all 0.3s ease;
+}
+.add-to-cart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+</style>

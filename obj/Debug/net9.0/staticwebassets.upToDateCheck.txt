@@ -1,6 +1,5 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\images\ring1.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -62,6 +61,7 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\images\ring1.jpg
 C:\Users\FREED\source\repos\MorozGrig\DropThisRepos\wwwroot\favicon.ico
 C:\Users\FREED\source\repos\MorozGrig\DropThisRepos\wwwroot\js\site.js
 C:\Users\FREED\source\repos\MorozGrig\DropThisRepos\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
