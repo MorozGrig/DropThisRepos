@@ -1,4 +1,16 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿document.addEventListener('DOMContentLoaded', function () {
+    updateCartCount();
+    setInterval(updateCartCount, 30000);
+});
 
-// Write your JavaScript code.
+async function updateCartCount() {
+    try {
+        const response = await fetch('/Home/GetCartCount');
+        const count = await response.json();
+        const badge = document.getElementById('cartCount');
+        if (badge) {
+            badge.textContent = count;
+            badge.style.display = count > 0 ? 'block' : 'none';
+        }
+    } catch (e) { }
+}

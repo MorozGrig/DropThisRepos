@@ -1,0 +1,99 @@
+﻿@model List<DropThisSite.Models.Jewelry>
+
+<div class="container my-5">
+    <h1 class="display-4 fw-bold mb-5 text-center">💎 Каталог ювелирных изделий</h1>
+
+    <div class="row g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-gem fa-4x text-warning mb-4"></i>
+                        <h5 class="card-title fw-bold">@item.NameJewelry</h5>
+                        
+                        <div class="mb-3">
+                            <small class="text-muted">
+                                @item.JewelryTip?.NameJewelryTip •
+                                @item.Material?.NameMaterial
+                                @if (item.Stone != null)
+                                {
+                                    <span>• @item.Stone.NameStone</span>
+                                }
+                            </small>
+                        </div>
+
+                        <div class="h3 text-danger fw-bold mb-4">@item.PriceJewelry.ToString("N0") ₽</div>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-lg" onclick="addToCart(@item.IdJewelry)">
+                                <i class="fas fa-cart-plus me-2"></i>В корзину
+                            </button>
+                            <a asp-action="Details" asp-route-id="@item.IdJewelry"
+                               class="btn btn-outline-secondary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- ПАГИНАЦИЯ -->
+    @if (ViewBag.TotalPages > 1)
+    {
+        <nav class="mt-5">
+            <ul class="pagination justify-content-center">
+                @for (int i = 1; i <= (int)ViewBag.TotalPages; i++)
+                {
+                    <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                        <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    }
+</div>
+
+<script>
+    async function addToCart(id) {
+        const btn = event.target.closest('button');
+        const originalText = btn.innerHTML;
+    
+        // АНИМАЦИЯ
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Добавляем...';
+        btn.disabled = true;
+
+        try {
+            const formData = new FormData();
+            formData.append('id', id);
+
+            const response = await fetch('/Home/AddToCart', {
+                method: 'POST',
+                body: formData  // ✅ ПРОСТО FormData
+            });
+        
+            const data = await response.json();
+        
+            // ОБНОВЛЯЕМ СЧЕТЧИК В ШАПКЕ
+            const badge = document.getElementById('cartCount');
+            if (badge) {
+                badge.textContent = data.count;
+                badge.style.display = data.count > 0 ? 'block' : 'none';
+            }
+        
+            btn.innerHTML = '<i class="fas fa-check me-2"></i>Добавлено! (' + data.count + ')';
+            btn.classList.add('btn-success');
+        
+        } catch(e) {
+            console.error('Ошибка:', e);
+            btn.innerHTML = originalText;
+        }
+    
+        // ВОЗВРАТ КНОПКИ
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.remove('btn-success');
+            btn.disabled = false;
+        }, 1500);
+    }
+</script>

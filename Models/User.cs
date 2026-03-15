@@ -16,7 +16,7 @@ namespace DropThisSite.Models
         [StringLength(20)]
         public string? Password { get; set; }
 
-        [StringLength(50)]
+        [EmailAddress]
         public string? Email { get; set; }
 
         public int IdRole { get; set; }

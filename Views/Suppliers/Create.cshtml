@@ -1,0 +1,43 @@
+﻿@model DropThisSite.Models.Supplier
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Supplier</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NameSupplier" class="control-label"></label>
+                <input asp-for="NameSupplier" class="form-control" />
+                <span asp-validation-for="NameSupplier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneSupplier" class="control-label"></label>
+                <input asp-for="PhoneSupplier" class="form-control" />
+                <span asp-validation-for="PhoneSupplier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailSupplier" class="control-label"></label>
+                <input asp-for="EmailSupplier" class="form-control" />
+                <span asp-validation-for="EmailSupplier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

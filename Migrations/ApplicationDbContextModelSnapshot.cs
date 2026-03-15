@@ -33,9 +33,6 @@ namespace DropThisSite.Migrations
                     b.Property<int>("IdJewelryTip")
                         .HasColumnType("int");
 
-                    b.Property<int?>("IdJewelryType")
-                        .HasColumnType("int");
-
                     b.Property<int>("IdMaterial")
                         .HasColumnType("int");
 
@@ -55,7 +52,7 @@ namespace DropThisSite.Migrations
 
                     b.HasKey("IdJewelry");
 
-                    b.HasIndex("IdJewelryType");
+                    b.HasIndex("IdJewelryTip");
 
                     b.HasIndex("IdMaterial");
 
@@ -196,8 +193,8 @@ namespace DropThisSite.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("WeightStone")
-                        .HasColumnType("int");
+                    b.Property<float>("WeightStone")
+                        .HasColumnType("real");
 
                     b.HasKey("IdStone");
 
@@ -240,8 +237,7 @@ namespace DropThisSite.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdUser"));
 
                     b.Property<string>("Email")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IdRole")
                         .HasColumnType("int");
@@ -267,7 +263,9 @@ namespace DropThisSite.Migrations
                 {
                     b.HasOne("DropThisSite.Models.JewelryTip", "JewelryTip")
                         .WithMany("Jewelries")
-                        .HasForeignKey("IdJewelryType");
+                        .HasForeignKey("IdJewelryTip")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("DropThisSite.Models.Material", "Material")
                         .WithMany("Jewelries")

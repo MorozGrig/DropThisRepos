@@ -14,7 +14,7 @@ namespace DropThisSite.Models
         public string? ColorStone { get; set; }
 
         [Required, Range(0, 1)]
-        public int WeightStone { get; set; }
+        public float WeightStone { get; set; }
 
         public ICollection<Jewelry>? Jewelries { get; set; }
     }

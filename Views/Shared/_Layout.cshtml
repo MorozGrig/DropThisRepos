@@ -12,13 +12,84 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-lg">
             <div class="container">
-                <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">💎 Ювелирка</a>
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link" asp-controller="Roles" asp-action="Index">Роли</a>
-                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
-                    <button class="btn-primary" onclick="location.href='/Users/Create'">Регистрация</button>
+                <!-- ЛОГО -->
+                <a class="navbar-brand fw-bold fs-3" asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-gem me-2 text-warning"></i>Ювелирка
+                </a>
+
+                <!-- ОСНОВНОЕ МЕНЮ -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Jewelries" asp-action="Index">Каталог</a>
+                        </li>
+                    </ul>
+
+                    <!-- ПРАВАЯ ЧАСТЬ: КОРЗИНА + АВТОРИЗАЦИЯ -->
+                    <ul class="navbar-nav">
+                        <!-- КОРЗИНА -->
+                        <li class="nav-item position-relative me-3">
+                            <a class="nav-link position-relative p-2" asp-controller="Home" asp-action="Cart">
+                                <i class="fas fa-shopping-cart fs-5"></i>
+                                <span class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-pill"
+                                      id="cartCount" style="font-size: 0.7em; min-width: 20px;">
+                                    0
+                                </span>
+                            </a>
+                        </li>
+
+                        <!-- АВТОРИЗАЦИЯ -->
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center p-2" href="#"
+                                       data-bs-toggle="dropdown">
+                                    <i class="fas fa-user-circle fs-4 me-2"></i>@User.Identity.Name
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Профиль</a></li>
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Order" asp-action="Index">
+                                            <i class="fas fa-box me-2"></i>Заказы
+                                        </a>
+                                    </li>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <a class="dropdown-item" asp-controller="Jewelries" asp-action="Create">
+                                                <i class="fas fa-crown me-2 text-warning"></i>Админка
+                                            </a>
+                                        </li>
+                                    }
+                                    <li><hr class="dropdown-divider"></li>
+                                    <form asp-controller="Account" asp-action="Logout" method="post" class="px-2">
+                                        <button type="submit" class="dropdown-item text-danger">
+                                            <i class="fas fa-sign-out-alt me-2"></i>Выйти
+                                        </button>
+                                    </form>
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-outline-light px-3 py-2 me-2" asp-controller="Account" asp-action="Login">
+                                    <i class="fas fa-sign-in-alt me-1"></i>Войти
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-warning text-dark px-4 py-2 fw-bold" asp-controller="Account" asp-action="Register">
+                                    Регистрация
+                                </a>
+                            </li>
+                        }
+                    </ul>
                 </div>
             </div>
         </nav>

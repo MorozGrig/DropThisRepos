@@ -13,7 +13,7 @@ namespace DropThisSite.Models
         public string? NameJewelry { get; set; }
 
         public int IdJewelryTip { get; set; }
-        [ForeignKey("IdJewelryType")]
+        [ForeignKey("IdJewelryTip")]
         public JewelryTip? JewelryTip { get; set; }
 
         public int IdMaterial {  get; set; }

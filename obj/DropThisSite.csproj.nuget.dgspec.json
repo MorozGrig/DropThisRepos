@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "S:\\USERS\\53-04k\\Мороз Григорий Игоревич\\УЧПРАК\\MorozGrig\\DropThisRepos\\DropThisSite.csproj": {}
+    "C:\\Users\\FREED\\source\\repos\\MorozGrig\\DropThisRepos\\DropThisSite.csproj": {}
   },
   "projects": {
-    "S:\\USERS\\53-04k\\Мороз Григорий Игоревич\\УЧПРАК\\MorozGrig\\DropThisRepos\\DropThisSite.csproj": {
+    "C:\\Users\\FREED\\source\\repos\\MorozGrig\\DropThisRepos\\DropThisSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\USERS\\53-04k\\Мороз Григорий Игоревич\\УЧПРАК\\MorozGrig\\DropThisRepos\\DropThisSite.csproj",
+        "projectUniqueName": "C:\\Users\\FREED\\source\\repos\\MorozGrig\\DropThisRepos\\DropThisSite.csproj",
         "projectName": "DropThisSite",
-        "projectPath": "S:\\USERS\\53-04k\\Мороз Григорий Игоревич\\УЧПРАК\\MorozGrig\\DropThisRepos\\DropThisSite.csproj",
-        "packagesPath": "C:\\Users\\10230041\\.nuget\\packages\\",
-        "outputPath": "S:\\USERS\\53-04k\\Мороз Григорий Игоревич\\УЧПРАК\\MorozGrig\\DropThisRepos\\obj\\",
+        "projectPath": "C:\\Users\\FREED\\source\\repos\\MorozGrig\\DropThisRepos\\DropThisSite.csproj",
+        "packagesPath": "C:\\Users\\FREED\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FREED\\source\\repos\\MorozGrig\\DropThisRepos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\10230041\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\FREED\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -97,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,61 @@
+﻿@model List<DropThisSite.Models.Jewelry>
+<div class="container my-5">
+    <h2>🛒 Корзина (<span id="cartCount">@ViewBag.CartCount</span>)</h2>
+    
+    @if (Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Товар</th>
+                        <th class="text-end">Цена</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <strong>@item.NameJewelry</strong>
+                                <br><small>@item.JewelryTip?.NameJewelryTip</small>
+                            </td>
+                            <td class="text-end fs-4 fw-bold text-danger">@item.PriceJewelry.ToString("N0") ₽</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-danger"
+                                        onclick="removeFromCart(@item.IdJewelry)">
+                                    <i class="fas fa-trash"></i> Удалить
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="text-end mt-4">
+            <a class="btn btn-success btn-lg">Оформить заказ</a>
+        </div>
+    }
+    else
+    {
+        <div class="text-center py-5">
+            <i class="fas fa-shopping-cart fa-5x text-muted mb-4"></i>
+            <h3>Корзина пуста</h3>
+        </div>
+    }
+</div>
+
+<script>
+    function removeFromCart(id) {
+        fetch('/Home/RemoveFromCart', {
+            method: 'POST',
+            headers: {'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()}
+        }, {jewelryId: id})
+        .then(r => r.json())
+        .then(data => {
+            if (data.count === 0) location.reload();
+            else $('#cartCount').text(data.count);
+        });
+    }
+</script>

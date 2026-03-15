@@ -1,0 +1,39 @@
+﻿@model DropThisSite.Models.Material
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Material</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdMaterial" />
+            <div class="form-group">
+                <label asp-for="NameMaterial" class="control-label"></label>
+                <input asp-for="NameMaterial" class="form-control" />
+                <span asp-validation-for="NameMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Proba" class="control-label"></label>
+                <input asp-for="Proba" class="form-control" />
+                <span asp-validation-for="Proba" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

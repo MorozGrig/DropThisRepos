@@ -1,0 +1,59 @@
+﻿@model DropThisSite.Models.Jewelry
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Jewelry</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdJewelry" />
+            <div class="form-group">
+                <label asp-for="NameJewelry" class="control-label"></label>
+                <input asp-for="NameJewelry" class="form-control" />
+                <span asp-validation-for="NameJewelry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdJewelryTip" class="control-label"></label>
+                <input asp-for="IdJewelryTip" class="form-control" />
+                <span asp-validation-for="IdJewelryTip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdMaterial" class="control-label"></label>
+                <select asp-for="IdMaterial" class="form-control" asp-items="ViewBag.IdMaterial"></select>
+                <span asp-validation-for="IdMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdStone" class="control-label"></label>
+                <select asp-for="IdStone" class="form-control" asp-items="ViewBag.IdStone"></select>
+                <span asp-validation-for="IdStone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdSupplier" class="control-label"></label>
+                <select asp-for="IdSupplier" class="form-control" asp-items="ViewBag.IdSupplier"></select>
+                <span asp-validation-for="IdSupplier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceJewelry" class="control-label"></label>
+                <input asp-for="PriceJewelry" class="form-control" />
+                <span asp-validation-for="PriceJewelry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
