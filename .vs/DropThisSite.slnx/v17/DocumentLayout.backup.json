@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\jewelries\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\jewelries\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\controllers\\jewelriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:controllers\\jewelriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\adminorders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\adminorders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\models\\jewelry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:models\\jewelry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\controllers\\adminorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:controllers\\adminorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\adminorders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\adminorders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -35,24 +55,12 @@
       "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\models\\jewelry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:models\\jewelry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\models\\stone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:models\\stone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\stones\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -110,24 +118,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JewelriesController.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\JewelriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\JewelriesController.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\JewelriesController.cs",
+              "RelativeToolTip": "Controllers\\JewelriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T09:47:23.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Jewelries\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Jewelries\\Index.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Jewelries\\Index.cshtml",
+              "RelativeToolTip": "Views\\Jewelries\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T09:44:29.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "HomeController.cs",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAuwGAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAuwFsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T08:24:55.275Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
@@ -140,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\AdminOrders\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\AdminOrders\\Index.cshtml",
@@ -153,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "AdminOrdersController.cs",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\AdminOrdersController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminOrdersController.cs",
@@ -166,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Supplier.cs",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Models\\Supplier.cs",
               "RelativeDocumentMoniker": "Models\\Supplier.cs",
@@ -174,24 +208,25 @@
               "RelativeToolTip": "Models\\Supplier.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T06:32:57.822Z"
+              "WhenOpened": "2026-03-16T06:32:57.822Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "SeedData.cs",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Data\\SeedData.cs",
               "RelativeDocumentMoniker": "Data\\SeedData.cs",
               "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Data\\SeedData.cs",
               "RelativeToolTip": "Data\\SeedData.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwDgAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T06:19:32.655Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "Jewelry.cs",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Models\\Jewelry.cs",
               "RelativeDocumentMoniker": "Models\\Jewelry.cs",
@@ -199,11 +234,12 @@
               "RelativeToolTip": "Models\\Jewelry.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwBMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T06:30:25.974Z"
+              "WhenOpened": "2026-03-16T06:30:25.974Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "Register.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
@@ -211,11 +247,12 @@
               "RelativeToolTip": "Views\\Account\\Register.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-16T05:58:44.218Z"
+              "WhenOpened": "2026-03-16T05:58:44.218Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "AccountController.cs",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -228,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Stones\\Edit.cshtml",
@@ -240,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Details.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Stones\\Details.cshtml",
@@ -252,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Stones\\Delete.cshtml",
@@ -264,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Create.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Stones\\Create.cshtml",
@@ -276,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Orders\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Orders\\Index.cshtml",
@@ -289,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -302,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -314,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Details.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Jewelries\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Jewelries\\Details.cshtml",
@@ -326,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "appsettings.json",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -338,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Jewelries\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Jewelries\\Delete.cshtml",
@@ -350,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Cart.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Home\\Cart.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Cart.cshtml",
@@ -362,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Stone.cs",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Models\\Stone.cs",
               "RelativeDocumentMoniker": "Models\\Stone.cs",
@@ -374,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Stones\\Index.cshtml",
@@ -386,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "Index.cshtml",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -398,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "site.css",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -410,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "UsersController.cs",
               "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",

@@ -3,22 +3,59 @@
 <div class="container my-5">
     <h1 class="display-4 fw-bold mb-5 text-center">💎 Каталог ювелирных изделий</h1>
 
-    <div class="row g-4">
+    <!-- ФИЛЬТРЫ -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <select class="form-select" onchange="filterCatalog(this.value)">
+                <option value="">Все категории</option>
+                @foreach (var tip in ViewBag.JewelryTips as List<DropThisSite.Models.JewelryTip>)
+                {
+                    <option value="@tip.IdJewelryTip">@tip.NameJewelryTip</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select class="form-select" onchange="filterPrice(this.value)">
+                <option value="">Все цены</option>
+                <option value="0-10000">До 10 000 ₽</option>
+                <option value="10000-50000">10 000 - 50 000 ₽</option>
+                <option value="50000+">50 000+ ₽</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <div class="input-group">
+                <input type="text" class="form-control" id="searchInput"
+                       placeholder="Поиск по названию..." onkeyup="searchCatalog()">
+                <button class="btn btn-outline-warning" onclick="searchCatalog()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4" id="catalogItems">
         @foreach (var item in Model)
         {
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="card h-100 shadow-lg">
+            <div class="col-xl-3 col-lg-4 col-md-6 item-card"
+                 data-category="@item.IdJewelryTip"
+                 data-price="@item.PriceJewelry"
+                 data-name="@item.NameJewelry.ToLower()">
+                <div class="card h-100 shadow-lg hover-shadow">
                     <div class="card-body text-center p-4">
                         <i class="fas fa-gem fa-4x text-warning mb-4"></i>
                         <h5 class="card-title fw-bold">@item.NameJewelry</h5>
-                        
+
                         <div class="mb-3">
+                            <small class="text-muted d-block">
+                                <i class="fas fa-tag me-1"></i>@item.JewelryTip?.NameJewelryTip
+                            </small>
                             <small class="text-muted">
-                                @item.JewelryTip?.NameJewelryTip •
-                                @item.Material?.NameMaterial
+                                <i class="fas fa-crown me-1"></i>@item.Material?.NameMaterial
                                 @if (item.Stone != null)
                                 {
-                                    <span>• @item.Stone.NameStone</span>
+                                    <span class="ms-2">
+                                        <i class="fas fa-gem me-1 text-danger"></i>@item.Stone.NameStone
+                                    </span>
                                 }
                             </small>
                         </div>
@@ -26,11 +63,13 @@
                         <div class="h3 text-danger fw-bold mb-4">@item.PriceJewelry.ToString("N0") ₽</div>
 
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary btn-lg" onclick="addToCart(@item.IdJewelry)">
+                            <button class="btn btn-primary btn-lg add-to-cart" data-id="@item.IdJewelry">
                                 <i class="fas fa-cart-plus me-2"></i>В корзину
                             </button>
                             <a asp-action="Details" asp-route-id="@item.IdJewelry"
-                               class="btn btn-outline-secondary">Подробнее</a>
+                               class="btn btn-outline-secondary">
+                                <i class="fas fa-eye me-2"></i>Подробнее
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -54,11 +93,25 @@
     }
 </div>
 
+<style>
+    .hover-shadow:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+        transition: all 0.3s ease;
+    }
+
+    .item-card.hidden {
+        display: none !important;
+    }
+</style>
+
 <script>
+    let cartCount = 0;
+
     async function addToCart(id) {
-        const btn = event.target.closest('button');
+        const btn = event.target.closest('.add-to-cart');
         const originalText = btn.innerHTML;
-    
+
         btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Добавляем...';
         btn.disabled = true;
 
@@ -68,31 +121,69 @@
 
             const response = await fetch('/Home/AddToCart', {
                 method: 'POST',
-                body: formData 
+                body: formData
             });
-        
+
             const data = await response.json();
-        
-            // ОБНОВЛЯЕМ СЧЕТЧИК В ШАПКЕ
-            const badge = document.getElementById('cartCount');
-            if (badge) {
-                badge.textContent = data.count;
-                badge.style.display = data.count > 0 ? 'block' : 'none';
-            }
-        
-            btn.innerHTML = '<i class="fas fa-check me-2"></i>Добавлено! (' + data.count + ')';
+            cartCount = data.count;
+
+            // АНИМАЦИЯ
+            btn.innerHTML = '<i class="fas fa-check-circle text-success me-2"></i>В корзине! (' + cartCount + ')';
             btn.classList.add('btn-success');
-        
+
+            // ОБНОВИМ СЧЕТЧИК В ШАПКЕ
+            updateCartBadge();
+
         } catch(e) {
-            console.error('Ошибка:', e);
             btn.innerHTML = originalText;
+            alert('Ошибка добавления в корзину');
         }
-    
-        // ВОЗВРАТ КНОПКИ
+
         setTimeout(() => {
             btn.innerHTML = originalText;
             btn.classList.remove('btn-success');
             btn.disabled = false;
-        }, 1500);
+        }, 2000);
+    }
+
+    function updateCartBadge() {
+        const badge = document.getElementById('cartCount');
+        if (badge) {
+            badge.textContent = cartCount;
+            badge.style.display = cartCount > 0 ? 'inline' : 'none';
+        }
+    }
+
+    // ФИЛЬТРЫ
+    function filterCatalog(categoryId) {
+        const cards = document.querySelectorAll('.item-card');
+        cards.forEach(card => {
+            const cat = card.dataset.category;
+            card.classList.toggle('hidden', categoryId && cat != categoryId);
+        });
+    }
+
+    function filterPrice(range) {
+        const cards = document.querySelectorAll('.item-card');
+        cards.forEach(card => {
+            const price = parseFloat(card.dataset.price);
+            let show = true;
+
+            if (range == '0-10000' && price > 10000) show = false;
+            if (range == '10000-50000' && (price < 10000 || price > 50000)) show = false;
+            if (range == '50000+' && price < 50000) show = false;
+
+            card.classList.toggle('hidden', !show);
+        });
+    }
+
+    function searchCatalog() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const cards = document.querySelectorAll('.item-card');
+
+        cards.forEach(card => {
+            const name = card.dataset.name;
+            card.classList.toggle('hidden', query && !name.includes(query));
+        });
     }
 </script>

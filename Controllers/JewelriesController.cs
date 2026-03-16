@@ -20,25 +20,32 @@ namespace DropThisSite.Controllers
             _context = context;
         }
 
-            // GET: Jewelries
-            // ✅ КАТАЛОГ ДЛЯ ПОКУПАТЕЛЕЙ
-            public IActionResult Index(int? page = 1)
+        // GET: Jewelries
+        public IActionResult Index(int page = 1, int categoryId = 0)
         {
             int pageSize = 12;
-            var jewelry = _context.Jewelries
+
+            IQueryable<Jewelry> query = _context.Jewelries.AsQueryable();
+
+            if (categoryId > 0)
+                query = query.Where(j => j.IdJewelryTip == categoryId);
+
+            var model = query
                 .Include(j => j.JewelryTip)
                 .Include(j => j.Material)
                 .Include(j => j.Stone)
-                .Include(j => j.Supplier)
-                .OrderBy(j => j.NameJewelry)
-                .Skip((page.Value - 1) * pageSize)
+                .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToList();
 
-            ViewBag.TotalPages = (int)Math.Ceiling(_context.Jewelries.Count() / (double)pageSize);
+            ViewBag.TotalPages = (int)Math.Ceiling(query.Count() / (double)pageSize);
             ViewBag.CurrentPage = page;
-            return View(jewelry);
+            ViewBag.JewelryTips = _context.JewelryTips.ToList();
+
+            return View(model);
         }
+
+
 
 
         // GET: Jewelries/Create
