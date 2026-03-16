@@ -24,5 +24,24 @@ namespace DropThisSite.Data
         public DbSet<StatusOrder> StatusOrders { get; set; }
 
         public DbSet<Order> Orders { get; set; }
+
+        public DbSet<OrderItem> OrderItems { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Order>()
+                .HasMany(o => o.OrderItems)
+                .WithOne(oi => oi.Order)
+                .HasForeignKey(oi => oi.IdOrder)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<OrderItem>()
+                .HasOne(oi => oi.Jewelry)
+                .WithMany(j => j.OrderItems)
+                .HasForeignKey(oi => oi.IdJewelry)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
     }
 }

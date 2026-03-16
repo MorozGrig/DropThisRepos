@@ -1,4 +1,4 @@
-﻿@model List<DropThisSite.Models.Order>
+@model List<DropThisSite.Models.Order>
 
 <div class="container my-5">
     <div class="d-flex justify-content-between align-items-center mb-5">
@@ -37,22 +37,35 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="row align-items-center">
-                        <div class="col-md-2 text-center">
-                            <i class="fas fa-gem fa-3x text-warning mb-3"></i>
-                            <div>@order.Quantity шт.</div>
-                        </div>
-                        <div class="col-md-5">
-                            <h5>@order.Jewelry?.NameJewelry</h5>
-                            <p class="text-muted mb-1">@order.Jewelry?.Material?.NameMaterial</p>
-                            @if (order.Jewelry?.Stone != null)
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h6 class="text-muted mb-3">Состав заказа (@order.Quantity шт.)</h6>
+                            @foreach (var item in order.OrderItems)
                             {
-                                <p class="text-muted mb-0">@order.Jewelry.Stone.ColorStone</p>
+                                <div class="border rounded p-2 mb-2">
+                                    <div class="d-flex justify-content-between">
+                                        <strong>@item.Jewelry?.NameJewelry</strong>
+                                        <span>@item.TotalPrice ₽</span>
+                                    </div>
+                                    <div class="text-muted small">
+                                        @item.Quantity шт. × @item.UnitPrice ₽
+                                        @if (item.Jewelry?.Material != null)
+                                        {
+                                            <span> · @item.Jewelry.Material.NameMaterial</span>
+                                        }
+                                        @if (item.Jewelry?.Stone != null)
+                                        {
+                                            <span> · @item.Jewelry.Stone.ColorStone</span>
+                                        }
+                                    </div>
+                                </div>
                             }
                         </div>
                         <div class="col-md-5">
-                            <p><strong>Телефон:</strong> @order.User?.Phone</p>
-                            <p><strong>Email:</strong> @order.User?.Email</p>
+                            <p><strong>Получатель:</strong> @(order.CustomerName ?? order.User?.Login)</p>
+                            <p><strong>Телефон:</strong> @(order.CustomerPhone ?? order.User?.Phone)</p>
+                            <p><strong>Email:</strong> @(order.CustomerEmail ?? order.User?.Email)</p>
+                            <p><strong>Адрес доставки:</strong> @(order.DeliveryAddress ?? "Не указан")</p>
                         </div>
                     </div>
                 </div>

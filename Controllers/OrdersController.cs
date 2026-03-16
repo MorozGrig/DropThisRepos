@@ -22,9 +22,14 @@ namespace DropThisSite.Controllers
             int userId = int.Parse(User.FindFirst("UserId")?.Value ?? "0");
 
             var orders = await _context.Orders
-                .Include(o => o.Jewelry)
-                .Include(o => o.StatusOrder)
+                                .Include(o => o.StatusOrder)
                 .Include(o => o.User)
+                .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Jewelry)
+                        .ThenInclude(j => j.Material)
+                .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Jewelry)
+                        .ThenInclude(j => j.Stone)
                 .Where(o => o.IdUser == userId)
                 .OrderByDescending(o => o.OrderDate)
                 .ToListAsync();

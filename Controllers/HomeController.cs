@@ -126,9 +126,15 @@ namespace DropThisSite.Controllers
                 return RedirectToAction("Cart");
 
             ViewBag.CartIds = cart;
-            ViewBag.TotalPrice = _context.Jewelries
-                .Where(j => cart.Contains(j.IdJewelry))
-                .Sum(j => j.PriceJewelry);
+            var groupedCart = cart
+                .GroupBy(id => id)
+                .ToDictionary(g => g.Key, g => g.Count());
+
+            var prices = _context.Jewelries
+                .Where(j => groupedCart.Keys.Contains(j.IdJewelry))
+                .ToDictionary(j => j.IdJewelry, j => j.PriceJewelry);
+
+            ViewBag.TotalPrice = groupedCart.Sum(i => prices.TryGetValue(i.Key, out var price) ? price * i.Value : 0);
 
             return View();
         }
@@ -140,34 +146,49 @@ namespace DropThisSite.Controllers
             if (cart.Count == 0)
                 return RedirectToAction("Index");
 
+            var groupedCart = cart
+                .GroupBy(id => id)
+                .ToDictionary(g => g.Key, g => g.Count());
+
             var cartItems = await _context.Jewelries
-                .Where(j => cart.Contains(j.IdJewelry))
+                .Where(j => groupedCart.Keys.Contains(j.IdJewelry))
                 .ToListAsync();
 
-            int totalPrice = cartItems.Sum(j => (int)j.PriceJewelry);
+            if (!cartItems.Any())
+                return RedirectToAction("Cart");
 
-            // ✅ СОЗДАЁМ Order ДЛЯ КАЖДОГО ТОВАРА (твоя структура)
-            foreach (var item in cartItems)
+            int totalQuantity = groupedCart.Sum(i => i.Value);
+            int totalPrice = cartItems.Sum(item => item.PriceJewelry * groupedCart[item.IdJewelry]);
+
+            int userId = int.TryParse(User.FindFirst("UserId")?.Value, out int parsedUserId) ? parsedUserId : 0;
+
+            var order = new Order
             {
-                var order = new Order
+                IdUser = userId,
+                IdJewelry = null,
+                IdStatusOrder = 1,
+                OrderDate = DateTime.Now,
+                Quantity = totalQuantity,
+                TotalPrice = totalPrice,
+                CustomerName = name,
+                CustomerPhone = phone,
+                CustomerEmail = email,
+                DeliveryAddress = address,
+                OrderItems = cartItems.Select(item => new OrderItem
                 {
-                    IdUser = int.TryParse(User.FindFirst("UserId")?.Value, out int userId) ? userId : 0,
                     IdJewelry = item.IdJewelry,
-                    IdStatusOrder = 1,
-                    OrderDate = DateTime.Now,
-                    Quantity = 1,
-                    TotalPrice = (int)item.PriceJewelry
-                };
+                    Quantity = groupedCart[item.IdJewelry],
+                    UnitPrice = item.PriceJewelry,
+                    TotalPrice = item.PriceJewelry * groupedCart[item.IdJewelry]
+                }).ToList()
+            };
 
-                _context.Orders.Add(order);
-            }
-
+            _context.Orders.Add(order);
             await _context.SaveChangesAsync();
 
-            // Очищаем корзину
             HttpContext.Session.Remove("Cart");
 
-            ViewBag.OrderCount = cartItems.Count;
+            ViewBag.OrderCount = totalQuantity;
             ViewBag.TotalPrice = totalPrice;
             return View();
         }
