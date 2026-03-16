@@ -19,13 +19,13 @@
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label asp-for="Phone" class="form-label fw-bold">Телефон</label>
-                                <input asp-for="Phone" type="tel" class="form-control" maxlength="20" />
-                                <span asp-validation-for="Phone" class="text-danger"></span>
+                                <input asp-for="Phone" type="tel" class="form-control" maxlength="20" placeholder="+7 (999) 123-45-67" pattern="^\+?[0-9\-\s\(\)]{7,20}$" title="Используйте формат: +7 (999) 123-45-67" />
+                                <small class="text-muted">Формат: +7 (999) 123-45-67</small><br /><span asp-validation-for="Phone" class="text-danger"></span>
                             </div>
                             <div class="col-12 mb-4">
-                                <label asp-for="Email" class="form-label fw-bold">Email</label>
-                                <input asp-for="Email" type="email" class="form-control" maxlength="100" />
-                                <span asp-validation-for="Email" class="text-danger"></span>
+                                <label asp-for="Email" class="form-label fw-bold">Электронная почта</label>
+                                <input asp-for="Email" type="email" class="form-control" maxlength="100" placeholder="example@email.com" />
+                                <small class="text-muted">Формат: example@email.com</small><br /><span asp-validation-for="Email" class="text-danger"></span>
                             </div>
                             <div class="col-12 mb-4">
                                 <label asp-for="Address" class="form-label fw-bold">Адрес доставки</label>

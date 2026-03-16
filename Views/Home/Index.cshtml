@@ -1,6 +1,6 @@
-@model List<DropThisSite.Models.Jewelry>
+﻿@model List<DropThisSite.Models.Jewelry>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Главная";
 }
 
 <div>
@@ -61,6 +61,7 @@ async function addToCart(button) {
 
         const response = await fetch('/Home/AddToCart', {
             method: 'POST',
+            headers: { 'X-Requested-With': 'XMLHttpRequest' },
             body: formData
         });
 
