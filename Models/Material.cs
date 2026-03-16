@@ -7,12 +7,12 @@ namespace DropThisSite.Models
         [Key]
         public int IdMaterial { get; set; }
 
-        [Required]
-        [StringLength(ValidationPatterns.ShortTextMaxLength)]
-        [RegularExpression(ValidationPatterns.SafeTextPattern)]
+        [Required(ErrorMessage = ValidationMessages.Required)]
+        [StringLength(ValidationPatterns.ShortTextMaxLength, ErrorMessage = ValidationMessages.InvalidLength)]
+        [RegularExpression(ValidationPatterns.SafeTextPattern, ErrorMessage = ValidationMessages.InvalidText)]
         public string? NameMaterial { get; set; }
 
-        [Required, Range(300, 1000)]
+        [Required(ErrorMessage = ValidationMessages.Required), Range(300, 1000)]
         public int Proba {  get; set; }
 
         public ICollection<Jewelry>? Jewelries { get; set; }

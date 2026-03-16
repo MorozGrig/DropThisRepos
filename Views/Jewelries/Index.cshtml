@@ -23,7 +23,7 @@
 
         <div class="col-md-2">
             <select name="materialId" class="form-select" onchange="this.form.submit()">
-                <option value="0">Все бренды</option>
+                <option value="0">Все материалы</option>
                 @foreach (var material in ViewBag.Materials as List<DropThisSite.Models.Material>)
                 {
                     if (material.IdMaterial == (int)ViewBag.SelectedMaterialId)
@@ -40,10 +40,18 @@
 
 
         <div class="col-md-2">
-            <select name="supplierId" class="form-select" onchange="this.form.submit()">
-                <option value="0">Все поставщики</option>
+            <select name="brandId" class="form-select" onchange="this.form.submit()">
+                <option value="0">Все бренды</option>
                 @foreach (var supplier in ViewBag.Suppliers as List<DropThisSite.Models.Supplier>)
                 {
+                    if (supplier.IdSupplier == (int)ViewBag.SelectedBrandId)
+                    {
+                        <option value="@supplier.IdSupplier" selected="selected">@supplier.NameSupplier</option>
+                    }
+                    else
+                    {
+                        <option value="@supplier.IdSupplier">@supplier.NameSupplier</option>
+                    }
                 }
             </select>
         </div>
@@ -196,7 +204,7 @@
                            asp-route-page="@i"
                            asp-route-categoryId="@ViewBag.SelectedCategoryId"
                            asp-route-materialId="@ViewBag.SelectedMaterialId"
-                           asp-route-supplierId="@ViewBag.SelectedSupplierId"
+                           asp-route-brandId="@ViewBag.SelectedBrandId"
                            asp-route-minPrice="@ViewBag.SelectedMinPrice"
                            asp-route-maxPrice="@ViewBag.SelectedMaxPrice"
                            asp-route-priceRange="@ViewBag.SelectedPriceRange"

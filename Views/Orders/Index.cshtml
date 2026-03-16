@@ -18,7 +18,7 @@
                 <div class="card-header bg-light">
                     <div class="row align-items-center">
                         <div class="col-md-6">
-                            <strong>Заказ от @order.OrderDate.ToString("dd.MM.yyyy HH:mm")</strong>
+                            <strong>Заказ №@order.IdOrder от @order.OrderDate.ToString("dd.MM.yyyy HH:mm")</strong>
                         </div>
                         <div class="col-md-3">
                             <span class="badge bg-@(order.StatusOrder?.NameStatusOrder switch
@@ -32,23 +32,23 @@
                             </span>
                         </div>
                         <div class="col-md-3 text-end">
-                            <span class="h5 text-warning">@order.TotalPrice ₽</span>
+                            <span class="h5 text-warning">@order.OrderItems.Sum(i => i.TotalPrice).ToString("N0") ₽</span>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-7">
-                            <h6 class="text-muted mb-3">Состав заказа (@order.Quantity шт.)</h6>
+                            <h6 class="text-muted mb-3">Состав заказа (@order.OrderItems.Sum(i => i.Quantity) шт.)</h6>
                             @foreach (var item in order.OrderItems)
                             {
                                 <div class="border rounded p-2 mb-2">
                                     <div class="d-flex justify-content-between">
                                         <strong>@item.Jewelry?.NameJewelry</strong>
-                                        <span>@item.TotalPrice ₽</span>
+                                        <span>@item.TotalPrice.ToString("N0") ₽</span>
                                     </div>
                                     <div class="text-muted small">
-                                        @item.Quantity шт. × @item.UnitPrice ₽
+                                        @item.Quantity шт. × @item.UnitPrice.ToString("N0") ₽
                                         @if (item.Jewelry?.Material != null)
                                         {
                                             <span> · @item.Jewelry.Material.NameMaterial</span>

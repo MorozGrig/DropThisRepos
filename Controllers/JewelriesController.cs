@@ -20,6 +20,7 @@ namespace DropThisSite.Controllers
             int page = 1,
             int categoryId = 0,
             int materialId = 0,
+            int brandId = 0,
             int supplierId = 0,
             int? minPrice = null,
             int? maxPrice = null,
@@ -41,8 +42,10 @@ namespace DropThisSite.Controllers
             if (materialId > 0)
                 query = query.Where(j => j.IdMaterial == materialId);
 
-            if (supplierId > 0)
-                query = query.Where(j => j.IdSupplier == supplierId);
+            var selectedBrandId = brandId > 0 ? brandId : supplierId;
+
+            if (selectedBrandId > 0)
+                query = query.Where(j => j.IdSupplier == selectedBrandId);
 
             if (minPrice.HasValue)
                 query = query.Where(j => j.PriceJewelry >= minPrice.Value);
@@ -84,7 +87,8 @@ namespace DropThisSite.Controllers
             ViewBag.Suppliers = _context.Suppliers.ToList();
             ViewBag.SelectedCategoryId = categoryId;
             ViewBag.SelectedMaterialId = materialId;
-            ViewBag.SelectedSupplierId = supplierId;
+            ViewBag.SelectedBrandId = selectedBrandId;
+            ViewBag.SelectedSupplierId = selectedBrandId;
             ViewBag.SelectedMinPrice = minPrice;
             ViewBag.SelectedMaxPrice = maxPrice;
             ViewBag.SelectedPriceRange = priceRange ?? string.Empty;

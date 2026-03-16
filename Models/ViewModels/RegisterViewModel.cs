@@ -4,24 +4,24 @@ namespace DropThisSite.Models.ViewModels
 {
     public class RegisterViewModel
     {
-        [Required]
-        [StringLength(ValidationPatterns.ShortTextMaxLength)]
-        [RegularExpression(ValidationPatterns.LoginPattern)]
+        [Required(ErrorMessage = ValidationMessages.Required)]
+        [StringLength(ValidationPatterns.ShortTextMaxLength, ErrorMessage = ValidationMessages.InvalidLength)]
+        [RegularExpression(ValidationPatterns.LoginPattern, ErrorMessage = ValidationMessages.InvalidLogin)]
         public string Login { get; set; } = string.Empty;
 
-        [Required]
-        [StringLength(ValidationPatterns.MediumTextMaxLength)]
-        [EmailAddress]
+        [Required(ErrorMessage = ValidationMessages.Required)]
+        [StringLength(ValidationPatterns.MediumTextMaxLength, ErrorMessage = ValidationMessages.InvalidLength)]
+        [EmailAddress(ErrorMessage = ValidationMessages.InvalidEmail)]
         public string Email { get; set; } = string.Empty;
 
-        [Required]
-        [StringLength(64, MinimumLength = 6)]
-        [RegularExpression(ValidationPatterns.PasswordPattern)]
+        [Required(ErrorMessage = ValidationMessages.Required)]
+        [StringLength(64, MinimumLength = 6, ErrorMessage = ValidationMessages.InvalidPassword)]
+        [RegularExpression(ValidationPatterns.PasswordPattern, ErrorMessage = ValidationMessages.InvalidPassword)]
         public string Password { get; set; } = string.Empty;
 
-        [Required]
-        [StringLength(20)]
-        [RegularExpression(ValidationPatterns.PhonePattern)]
+        [Required(ErrorMessage = ValidationMessages.Required)]
+        [StringLength(20, ErrorMessage = ValidationMessages.InvalidLength)]
+        [RegularExpression(ValidationPatterns.PhonePattern, ErrorMessage = ValidationMessages.InvalidPhone)]
         public string Phone { get; set; } = string.Empty;
     }
 }
