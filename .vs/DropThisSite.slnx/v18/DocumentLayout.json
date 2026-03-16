@@ -138,37 +138,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\Views\\Suppliers\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Suppliers\\Create.cshtml",
-              "ToolTip": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\Views\\Suppliers\\Create.cshtml",
-              "RelativeToolTip": "Views\\Suppliers\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-16T22:00:32.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\Views\\Users\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Users\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\Views\\Users\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Users\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-16T22:00:01.105Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -224,6 +198,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-16T14:00:59.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\Views\\Users\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\Views\\Users\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Users\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T22:00:01.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\Views\\Suppliers\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Suppliers\\Create.cshtml",
+              "ToolTip": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\Views\\Suppliers\\Create.cshtml",
+              "RelativeToolTip": "Views\\Suppliers\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T22:00:32.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 28,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\Controllers\\AdminController.cs",
@@ -257,19 +270,6 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAAACgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-15T20:20:42.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-16T14:00:59.059Z",
               "EditorCaption": ""
             },
             {
