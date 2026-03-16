@@ -22,5 +22,9 @@ namespace DropThisSite.Models.ViewModels
         [Required(ErrorMessage = ValidationMessages.Required)]
         [StringLength(ValidationPatterns.LongTextMaxLength, ErrorMessage = ValidationMessages.InvalidLength)]
         public string Address { get; set; } = string.Empty;
+
+        public string? AddressCoordinates { get; set; }
+
+        public bool IsAddressVerified { get; set; }
     }
 }
