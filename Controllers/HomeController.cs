@@ -19,7 +19,17 @@ namespace DropThisSite.Controllers
             _context = context;
         }
 
-        public IActionResult Index() => View();
+        public IActionResult Index()
+        {
+            var latestItems = _context.Jewelries
+                .Include(j => j.JewelryTip)
+                .Include(j => j.Material)
+                .OrderByDescending(j => j.IdJewelry)
+                .Take(3)
+                .ToList();
+
+            return View(latestItems);
+        }
 
         public IActionResult Privacy() => View();
 
@@ -46,14 +56,17 @@ namespace DropThisSite.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddToCart(int id) // ✅ ПРОСТО int id
+        public IActionResult AddToCart(int id)
         {
-            var cart = GetCartFromSession();
-            if (!cart.Contains(id))
+            var jewelryExists = _context.Jewelries.Any(j => j.IdJewelry == id);
+            if (!jewelryExists)
             {
-                cart.Add(id);
-                SetCartInSession(cart);
+                return NotFound(new { error = "Товар не найден" });
             }
+
+            var cart = GetCartFromSession();
+            cart.Add(id);
+            SetCartInSession(cart);
 
             return Json(new { count = cart.Count });
         }

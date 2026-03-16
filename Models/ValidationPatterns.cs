@@ -9,5 +9,9 @@ namespace DropThisSite.Models
         public const string LoginPattern = @"^[a-zA-Z0-9._-]+$";
         public const string PasswordPattern = @"^(?=.{6,64}$)[^\s]+$";
         public const string PhonePattern = @"^\+?[0-9\-\s\(\)]{7,20}$";
+        public const string AddressPattern = @"^[a-zA-Zа-яА-ЯёЁ0-9\s\-\.,/№]+$";
+
+        public const int PriceMaxValue = 10000000;
+        public const int QuantityMaxValue = 100;
     }
 }

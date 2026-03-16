@@ -1,4 +1,5 @@
-﻿@{
+@model List<DropThisSite.Models.Jewelry>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -11,79 +12,48 @@
 
 <div class="container my-5">
     <h2 class="mb-4 text-center">Новинки каталога</h2>
-    <div class="row">
-        <!-- Товар 1 -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm border-warning">
-                <img src="ring1.jpg" class="card-img-top" alt="Золотое кольцо">
-                <div class="card-body">
-                    <h5 class="card-title">Золотое кольцо</h5>
-                    <p class="card-text text-muted">Золото 585 • Кольца</p>
-                    <h4 class="text-danger">25 000 ₽</h4>
-                    <button onclick="window.location.href='/Home/Product/1'"
-                            class="btn btn-primary w-100 mb-2">
-                        Подробнее
-                    </button>
-                    <button onclick="addToCart(1)" class="btn btn-success w-100 add-to-cart-btn">
-                        <i class="fas fa-shopping-cart"></i> В корзину
-                    </button>
-                </div>
-            </div>
-        </div>
 
-        <!-- Товар 2 -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm border-warning">
-                <img src="/images/earrings1.jpg" class="card-img-top" alt="Серебряные серьги">
-                <div class="card-body">
-                    <h5 class="card-title">Серебряные серьги</h5>
-                    <p class="card-text text-muted">Серебро 925 • Серьги</p>
-                    <h4 class="text-danger">4 500 ₽</h4>
-                    <button onclick="window.location.href='/Home/Product/2'"
-                            class="btn btn-primary w-100 mb-2">
-                        Подробнее
-                    </button>
-                    <button onclick="addToCart(2)" class="btn btn-success w-100 add-to-cart-btn">
-                        <i class="fas fa-shopping-cart"></i> В корзину
-                    </button>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning text-center">Новинки пока не добавлены.</div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm border-warning">
+                        <img src="/images/ring1.jpg" class="card-img-top" alt="@item.NameJewelry">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.NameJewelry</h5>
+                            <p class="card-text text-muted">@item.Material?.NameMaterial • @item.JewelryTip?.NameJewelryTip</p>
+                            <h4 class="text-danger">@item.PriceJewelry.ToString("N0") ₽</h4>
+                            <a asp-controller="Jewelries" asp-action="Details" asp-route-id="@item.IdJewelry"
+                               class="btn btn-primary w-100 mb-2">
+                                Подробнее
+                            </a>
+                            <button type="button"
+                                    data-id="@item.IdJewelry"
+                                    class="btn btn-success w-100 add-to-cart-btn"
+                                    onclick="addToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> В корзину
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
-
-        <!-- Товар 3 -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm border-warning">
-                <img src="/images/bracelet1.jpg" class="card-img-top" alt="Платиновый браслет">
-                <div class="card-body">
-                    <h5 class="card-title">Платиновый браслет</h5>
-                    <p class="card-text text-muted">Платина 950 • Браслеты</p>
-                    <h4 class="text-danger">85 000 ₽</h4>
-                    <button onclick="window.location.href='/Home/Product/3'"
-                            class="btn btn-primary w-100 mb-2">
-                        Подробнее
-                    </button>
-                    <button onclick="addToCart(3)" class="btn btn-success w-100 add-to-cart-btn">
-                        <i class="fas fa-shopping-cart"></i> В корзину
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+    }
 </div>
 
-<!-- ✅ JavaScript для корзины -->
 <script>
-let addingToCart = false;
+async function addToCart(button) {
+    const id = button.dataset.id;
+    const originalText = button.innerHTML;
 
-async function addToCart(id) {
-    if (addingToCart) return;
-    addingToCart = true;
-    
-    const btn = event.target.closest('button');
-    const originalText = btn.innerHTML;
-    
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Добавляем...';
-    btn.disabled = true;
+    button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Добавляем...';
+    button.disabled = true;
 
     try {
         const formData = new FormData();
@@ -93,30 +63,29 @@ async function addToCart(id) {
             method: 'POST',
             body: formData
         });
-        
+
+        if (!response.ok) {
+            throw new Error('Не удалось добавить товар');
+        }
+
         const data = await response.json();
-        
-        // Обновляем счетчики корзины
+
         const badges = document.querySelectorAll('#cartCount');
         badges.forEach(badge => {
             badge.textContent = data.count;
             badge.style.display = data.count > 0 ? 'block' : 'none';
         });
-        
-        btn.innerHTML = '<i class="fas fa-check me-2"></i>Добавлено!';
-        btn.classList.add('animate__animated', 'animate__tada');
-        
-    } catch(error) {
+
+        button.innerHTML = '<i class="fas fa-check me-2"></i>Добавлено!';
+    } catch (error) {
         console.error('Ошибка:', error);
-        btn.innerHTML = '<i class="fas fa-exclamation me-2"></i>Ошибка';
+        button.innerHTML = '<i class="fas fa-exclamation me-2"></i>Ошибка';
     }
-    
+
     setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.classList.remove('animate__animated', 'animate__tada');
-        btn.disabled = false;
-        addingToCart = false;
-    }, 2000);
+        button.innerHTML = originalText;
+        button.disabled = false;
+    }, 1500);
 }
 </script>
 
@@ -124,6 +93,7 @@ async function addToCart(id) {
 .add-to-cart-btn {
     transition: all 0.3s ease;
 }
+
 .add-to-cart-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
