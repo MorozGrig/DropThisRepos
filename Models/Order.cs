@@ -6,6 +6,7 @@ namespace DropThisSite.Models
     public class Order
     {
         [Key]
+        [Range(1, int.MaxValue)]
         public int IdOrder { get; set; }
 
         public int IdUser { get; set; }
@@ -30,6 +31,7 @@ namespace DropThisSite.Models
         public string? CustomerEmail { get; set; }
 
         [Required, StringLength(ValidationPatterns.LongTextMaxLength)]
+        [RegularExpression(ValidationPatterns.AddressPattern)]
         public string? DeliveryAddress { get; set; }
 
         public int IdStatusOrder { get; set; }
@@ -39,10 +41,10 @@ namespace DropThisSite.Models
         [Required]
         public DateTime OrderDate { get; set; }
 
-        [Required, Range(1, 100)]
+        [Required, Range(1, ValidationPatterns.QuantityMaxValue)]
         public int Quantity { get; set; }
 
-        [Required, Range(0, 100000000)]
+        [Required, Range(0, ValidationPatterns.PriceMaxValue * ValidationPatterns.QuantityMaxValue)]
         public int TotalPrice { get; set; }
 
         public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
