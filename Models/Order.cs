@@ -6,7 +6,7 @@ namespace DropThisSite.Models
     public class Order
     {
         [Key]
-        [Range(1, int.MaxValue)]
+        [Range(1, int.MaxValue, ErrorMessage = ValidationMessages.InvalidRange)]
         public int IdOrder { get; set; }
 
         public int IdUser { get; set; }
@@ -17,34 +17,34 @@ namespace DropThisSite.Models
         [ForeignKey("IdJewelry")]
         public Jewelry? Jewelry { get; set; }
 
-        [Required, StringLength(ValidationPatterns.MediumTextMaxLength)]
-        [RegularExpression(ValidationPatterns.SafeTextPattern)]
+        [Required(ErrorMessage = ValidationMessages.Required), StringLength(ValidationPatterns.MediumTextMaxLength)]
+        [RegularExpression(ValidationPatterns.SafeTextPattern, ErrorMessage = ValidationMessages.InvalidText)]
         public string? CustomerName { get; set; }
 
-        [Required, StringLength(20)]
-        [Phone]
-        [RegularExpression(ValidationPatterns.PhonePattern)]
+        [Required(ErrorMessage = ValidationMessages.Required), StringLength(20)]
+        [Phone(ErrorMessage = ValidationMessages.InvalidPhone)]
+        [RegularExpression(ValidationPatterns.PhonePattern, ErrorMessage = ValidationMessages.InvalidPhone)]
         public string? CustomerPhone { get; set; }
 
-        [Required, StringLength(ValidationPatterns.MediumTextMaxLength)]
-        [EmailAddress]
+        [Required(ErrorMessage = ValidationMessages.Required), StringLength(ValidationPatterns.MediumTextMaxLength)]
+        [EmailAddress(ErrorMessage = ValidationMessages.InvalidEmail)]
         public string? CustomerEmail { get; set; }
 
-        [Required, StringLength(ValidationPatterns.LongTextMaxLength)]
-        [RegularExpression(ValidationPatterns.AddressPattern)]
+        [Required(ErrorMessage = ValidationMessages.Required), StringLength(ValidationPatterns.LongTextMaxLength)]
+        [RegularExpression(ValidationPatterns.AddressPattern, ErrorMessage = ValidationMessages.InvalidAddress)]
         public string? DeliveryAddress { get; set; }
 
         public int IdStatusOrder { get; set; }
         [ForeignKey("IdStatusOrder")]
         public StatusOrder? StatusOrder { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = ValidationMessages.Required)]
         public DateTime OrderDate { get; set; }
 
-        [Required, Range(1, ValidationPatterns.QuantityMaxValue)]
+        [Required(ErrorMessage = ValidationMessages.Required), Range(1, ValidationPatterns.QuantityMaxValue)]
         public int Quantity { get; set; }
 
-        [Required, Range(0, ValidationPatterns.PriceMaxValue * ValidationPatterns.QuantityMaxValue)]
+        [Required(ErrorMessage = ValidationMessages.Required), Range(0, ValidationPatterns.PriceMaxValue * ValidationPatterns.QuantityMaxValue)]
         public int TotalPrice { get; set; }
 
         public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();

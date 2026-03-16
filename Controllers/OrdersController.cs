@@ -19,7 +19,10 @@ namespace DropThisSite.Controllers
         // GET: Orders/Index (Мои заказы)
         public async Task<IActionResult> Index()
         {
-            int userId = int.Parse(User.FindFirst("UserId")?.Value ?? "0");
+            if (!int.TryParse(User.FindFirst("UserId")?.Value, out var userId) || userId <= 0)
+            {
+                return Challenge();
+            }
 
             var orders = await _context.Orders
                                 .Include(o => o.StatusOrder)
@@ -32,6 +35,7 @@ namespace DropThisSite.Controllers
                         .ThenInclude(j => j.Stone)
                 .Where(o => o.IdUser == userId)
                 .OrderByDescending(o => o.OrderDate)
+                .AsSplitQuery()
                 .ToListAsync();
 
             return View(orders);
