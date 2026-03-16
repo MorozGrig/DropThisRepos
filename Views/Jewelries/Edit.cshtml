@@ -10,32 +10,32 @@
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="IdJewelry" />
     <div class="col-md-6">
-        <label asp-for="NameJewelry" class="form-label"></label>
+        <label asp-for="NameJewelry" class="form-label">Название украшения</label>
         <input asp-for="NameJewelry" class="form-control" />
         <span asp-validation-for="NameJewelry" class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="IdJewelryTip" class="form-label"></label>
+        <label asp-for="IdJewelryTip" class="form-label">Тип украшения</label>
         <select asp-for="IdJewelryTip" class="form-select" asp-items="ViewBag.IdJewelryTip"></select>
         <span asp-validation-for="IdJewelryTip" class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="IdMaterial" class="form-label"></label>
+        <label asp-for="IdMaterial" class="form-label">Материал</label>
         <select asp-for="IdMaterial" class="form-select" asp-items="ViewBag.IdMaterial"></select>
         <span asp-validation-for="IdMaterial" class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="IdStone" class="form-label"></label>
+        <label asp-for="IdStone" class="form-label">Камень</label>
         <select asp-for="IdStone" class="form-select" asp-items="ViewBag.IdStone"></select>
         <span asp-validation-for="IdStone" class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="IdSupplier" class="form-label"></label>
+        <label asp-for="IdSupplier" class="form-label">Бренд</label>
         <select asp-for="IdSupplier" class="form-select" asp-items="ViewBag.IdSupplier"></select>
         <span asp-validation-for="IdSupplier" class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="PriceJewelry" class="form-label"></label>
+        <label asp-for="PriceJewelry" class="form-label">Стоимость украшения</label>
         <input asp-for="PriceJewelry" class="form-control" />
         <span asp-validation-for="PriceJewelry" class="text-danger"></span>
     </div>
