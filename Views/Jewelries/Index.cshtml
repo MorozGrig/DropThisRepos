@@ -24,6 +24,16 @@
             </select>
         </div>
 
+
+        <div class="col-md-2">
+            <select name="supplierId" class="form-select" onchange="this.form.submit()">
+                <option value="0">Все поставщики</option>
+                @foreach (var supplier in ViewBag.Suppliers as List<DropThisSite.Models.Supplier>)
+                {
+                    <option value="@supplier.IdSupplier" @(supplier.IdSupplier == (int)ViewBag.SelectedSupplierId ? "selected" : null)>@supplier.NameSupplier</option>
+                }
+            </select>
+        </div>
         <div class="col-md-2">
             <select name="priceRange" class="form-select" onchange="this.form.submit()">
                 <option value="" @(string.IsNullOrEmpty((string)ViewBag.SelectedPriceRange) ? "selected" : null)>Все цены</option>
@@ -41,7 +51,15 @@
             </select>
         </div>
 
-        <div class="col-md-4">
+
+        <div class="col-md-2">
+            <input type="number" name="minPrice" class="form-control" min="0" max="10000000" value="@ViewBag.SelectedMinPrice" placeholder="Мин. цена" />
+        </div>
+
+        <div class="col-md-2">
+            <input type="number" name="maxPrice" class="form-control" min="0" max="10000000" value="@ViewBag.SelectedMaxPrice" placeholder="Макс. цена" />
+        </div>
+        <div class="col-md-2">
             <div class="input-group">
                 <input type="text"
                        class="form-control"
@@ -111,6 +129,9 @@
                            asp-route-page="@i"
                            asp-route-categoryId="@ViewBag.SelectedCategoryId"
                            asp-route-materialId="@ViewBag.SelectedMaterialId"
+                           asp-route-supplierId="@ViewBag.SelectedSupplierId"
+                           asp-route-minPrice="@ViewBag.SelectedMinPrice"
+                           asp-route-maxPrice="@ViewBag.SelectedMaxPrice"
                            asp-route-priceRange="@ViewBag.SelectedPriceRange"
                            asp-route-search="@ViewBag.SelectedSearch"
                            asp-route-sort="@ViewBag.SelectedSort">@i</a>
