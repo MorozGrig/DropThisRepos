@@ -1,5 +1,4 @@
-﻿using NuGet.Protocol;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DropThisSite.Models
@@ -9,7 +8,8 @@ namespace DropThisSite.Models
         [Key]
         public int IdJewelry { get; set; }
 
-        [Required, StringLength(50)]
+        [Required, StringLength(ValidationPatterns.ShortTextMaxLength)]
+        [RegularExpression(ValidationPatterns.SafeTextPattern)]
         public string? NameJewelry { get; set; }
 
         public int IdJewelryTip { get; set; }
@@ -28,7 +28,7 @@ namespace DropThisSite.Models
         [ForeignKey("IdSupplier")]
         public Supplier? Supplier { get; set; }
 
-        [Required, Range(10000, 100000)]
+        [Required, Range(0, 10000000)]
         public int PriceJewelry { get; set; }
 
         public ICollection<Order>? Orders { get; set; }

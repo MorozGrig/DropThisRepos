@@ -7,7 +7,8 @@ namespace DropThisSite.Models
         [Key]
         public int IdStatusOrder { get; set; }
 
-        [Required, StringLength(50)]
+        [Required, StringLength(ValidationPatterns.ShortTextMaxLength)]
+        [RegularExpression(ValidationPatterns.SafeTextPattern)]
         public string? NameStatusOrder { get; set; }
 
         public ICollection<Order>? Orders { get; set; }

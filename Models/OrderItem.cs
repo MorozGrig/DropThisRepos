@@ -19,10 +19,10 @@ namespace DropThisSite.Models
         [Required, Range(1, 100)]
         public int Quantity { get; set; }
 
-        [Required]
+        [Required, Range(0, 100000000)]
         public int UnitPrice { get; set; }
 
-        [Required]
+        [Required, Range(0, 100000000)]
         public int TotalPrice { get; set; }
     }
 }

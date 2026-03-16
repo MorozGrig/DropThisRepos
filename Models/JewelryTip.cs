@@ -7,7 +7,8 @@ namespace DropThisSite.Models
         [Key]
         public int IdJewelryTip {  get; set; }
 
-        [Required, StringLength(50)]
+        [Required, StringLength(ValidationPatterns.ShortTextMaxLength)]
+        [RegularExpression(ValidationPatterns.SafeTextPattern)]
         public string? NameJewelryTip { get; set; }
 
         public ICollection<Jewelry>? Jewelries { get; set; }

@@ -1,5 +1,6 @@
 using DropThisSite.Data;
 using DropThisSite.Models;
+using DropThisSite.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
@@ -80,6 +81,11 @@ namespace DropThisSite.Controllers
         [HttpPost]
         public IActionResult UpdateCartItem(int id, int quantity)
         {
+            if (quantity < 1 || quantity > 100)
+            {
+                return BadRequest(new { error = "Количество должно быть от 1 до 100" });
+            }
+
             var cart = GetCartFromSession();
 
             cart.RemoveAll(x => x == id);
@@ -136,15 +142,27 @@ namespace DropThisSite.Controllers
 
             ViewBag.TotalPrice = groupedCart.Sum(i => prices.TryGetValue(i.Key, out var price) ? price * i.Value : 0);
 
-            return View();
+            return View(new CheckoutViewModel());
         }
 
         [HttpPost]
-        public async Task<IActionResult> CheckoutProcess(string name, string phone, string address, string email)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CheckoutProcess(CheckoutViewModel model)
         {
             var cart = GetCartFromSession();
             if (cart.Count == 0)
                 return RedirectToAction("Index");
+
+            if (!ModelState.IsValid)
+            {
+                var grouped = cart.GroupBy(id => id).ToDictionary(g => g.Key, g => g.Count());
+                var prices = _context.Jewelries
+                    .Where(j => grouped.Keys.Contains(j.IdJewelry))
+                    .ToDictionary(j => j.IdJewelry, j => j.PriceJewelry);
+
+                ViewBag.TotalPrice = grouped.Sum(i => prices.TryGetValue(i.Key, out var price) ? price * i.Value : 0);
+                return View("Checkout", model);
+            }
 
             var groupedCart = cart
                 .GroupBy(id => id)
@@ -170,10 +188,10 @@ namespace DropThisSite.Controllers
                 OrderDate = DateTime.Now,
                 Quantity = totalQuantity,
                 TotalPrice = totalPrice,
-                CustomerName = name,
-                CustomerPhone = phone,
-                CustomerEmail = email,
-                DeliveryAddress = address,
+                CustomerName = model.Name,
+                CustomerPhone = model.Phone,
+                CustomerEmail = model.Email,
+                DeliveryAddress = model.Address,
                 OrderItems = cartItems.Select(item => new OrderItem
                 {
                     IdJewelry = item.IdJewelry,
@@ -192,6 +210,7 @@ namespace DropThisSite.Controllers
             ViewBag.TotalPrice = totalPrice;
             return View();
         }
+
 
     }
 }

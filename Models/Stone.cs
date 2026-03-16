@@ -7,10 +7,12 @@ namespace DropThisSite.Models
         [Key]
         public int IdStone { get; set; }
 
-        [Required, StringLength(50)]
+        [Required, StringLength(ValidationPatterns.ShortTextMaxLength)]
+        [RegularExpression(ValidationPatterns.SafeTextPattern)]
         public string? NameStone { get; set; }
 
-        [Required, StringLength(50)]
+        [Required, StringLength(ValidationPatterns.ShortTextMaxLength)]
+        [RegularExpression(ValidationPatterns.SafeTextPattern)]
         public string? ColorStone { get; set; }
 
         [Required, Range(0, 1)]

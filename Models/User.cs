@@ -9,17 +9,23 @@ namespace DropThisSite.Models
         public int IdUser { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(ValidationPatterns.ShortTextMaxLength)]
+        [RegularExpression(ValidationPatterns.LoginPattern)]
         public string? Login { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(64, MinimumLength = 6)]
+        [RegularExpression(ValidationPatterns.PasswordPattern)]
         public string? Password { get; set; }
 
         [Required]
         [Phone]
+        [StringLength(20)]
+        [RegularExpression(ValidationPatterns.PhonePattern)]
         public string? Phone { get; set; }
 
+        [Required]
+        [StringLength(ValidationPatterns.MediumTextMaxLength)]
         [EmailAddress]
         public string? Email { get; set; }
 

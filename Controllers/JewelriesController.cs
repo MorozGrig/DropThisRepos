@@ -1,13 +1,8 @@
 ﻿using DropThisSite.Data;
 using DropThisSite.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DropThisSite.Controllers
 {
@@ -21,32 +16,67 @@ namespace DropThisSite.Controllers
         }
 
         // GET: Jewelries
-        public IActionResult Index(int page = 1, int categoryId = 0)
+        public IActionResult Index(
+            int page = 1,
+            int categoryId = 0,
+            int materialId = 0,
+            string? priceRange = null,
+            string? search = null,
+            string? sort = null)
         {
-            int pageSize = 12;
+            const int pageSize = 12;
 
-            IQueryable<Jewelry> query = _context.Jewelries.AsQueryable();
+            IQueryable<Jewelry> query = _context.Jewelries
+                .Include(j => j.JewelryTip)
+                .Include(j => j.Material)
+                .Include(j => j.Stone)
+                .AsQueryable();
 
             if (categoryId > 0)
                 query = query.Where(j => j.IdJewelryTip == categoryId);
 
+            if (materialId > 0)
+                query = query.Where(j => j.IdMaterial == materialId);
+
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                var normalizedSearch = search.Trim().ToLower();
+                query = query.Where(j => j.NameJewelry != null && j.NameJewelry.ToLower().Contains(normalizedSearch));
+            }
+
+            query = priceRange switch
+            {
+                "0-10000" => query.Where(j => j.PriceJewelry <= 10000),
+                "10000-50000" => query.Where(j => j.PriceJewelry >= 10000 && j.PriceJewelry <= 50000),
+                "50000+" => query.Where(j => j.PriceJewelry >= 50000),
+                _ => query
+            };
+
+            query = sort switch
+            {
+                "price_asc" => query.OrderBy(j => j.PriceJewelry),
+                "price_desc" => query.OrderByDescending(j => j.PriceJewelry),
+                _ => query.OrderBy(j => j.IdJewelry)
+            };
+
+            var totalCount = query.Count();
             var model = query
-                .Include(j => j.JewelryTip)
-                .Include(j => j.Material)
-                .Include(j => j.Stone)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToList();
 
-            ViewBag.TotalPages = (int)Math.Ceiling(query.Count() / (double)pageSize);
+            ViewBag.TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
             ViewBag.CurrentPage = page;
             ViewBag.JewelryTips = _context.JewelryTips.ToList();
+            ViewBag.Materials = _context.Materials.ToList();
+            ViewBag.SelectedCategoryId = categoryId;
+            ViewBag.SelectedMaterialId = materialId;
+            ViewBag.SelectedPriceRange = priceRange ?? string.Empty;
+            ViewBag.SelectedSearch = search ?? string.Empty;
+            ViewBag.SelectedSort = sort ?? string.Empty;
 
             return View(model);
         }
-
-
-
 
         // GET: Jewelries/Create
         public IActionResult Create()
@@ -58,9 +88,6 @@ namespace DropThisSite.Controllers
             return View();
         }
 
-        // POST: Jewelries/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdJewelry,NameJewelry,IdJewelryTip,IdMaterial,IdStone,IdSupplier,PriceJewelry")] Jewelry jewelry)
@@ -77,7 +104,6 @@ namespace DropThisSite.Controllers
             return View(jewelry);
         }
 
-        // GET: Jewelries/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -96,9 +122,6 @@ namespace DropThisSite.Controllers
             return View(jewelry);
         }
 
-        // POST: Jewelries/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdJewelry,NameJewelry,IdJewelryTip,IdMaterial,IdStone,IdSupplier,PriceJewelry")] Jewelry jewelry)
@@ -134,7 +157,6 @@ namespace DropThisSite.Controllers
             return View(jewelry);
         }
 
-        // GET: Jewelries/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -155,7 +177,6 @@ namespace DropThisSite.Controllers
             return View(jewelry);
         }
 
-        // POST: Jewelries/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
