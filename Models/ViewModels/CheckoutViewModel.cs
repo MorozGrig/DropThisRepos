@@ -21,7 +21,6 @@ namespace DropThisSite.Models.ViewModels
 
         [Required(ErrorMessage = ValidationMessages.Required)]
         [StringLength(ValidationPatterns.LongTextMaxLength, ErrorMessage = ValidationMessages.InvalidLength)]
-        [RegularExpression(ValidationPatterns.AddressPattern, ErrorMessage = ValidationMessages.InvalidAddress)]
         public string Address { get; set; } = string.Empty;
     }
 }

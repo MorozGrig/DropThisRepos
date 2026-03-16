@@ -1,8 +1,9 @@
+using DropThisSite.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace DropThisSite.Models.ViewModels
 {
-    public class RegisterViewModel
+    public class ProfileViewModel
     {
         [Required(ErrorMessage = ValidationMessages.Required)]
         [StringLength(ValidationPatterns.ShortTextMaxLength, ErrorMessage = ValidationMessages.InvalidLength)]
@@ -15,17 +16,10 @@ namespace DropThisSite.Models.ViewModels
         public string Email { get; set; } = string.Empty;
 
         [Required(ErrorMessage = ValidationMessages.Required)]
-        [StringLength(64, MinimumLength = 6, ErrorMessage = ValidationMessages.InvalidPassword)]
-        [RegularExpression(ValidationPatterns.PasswordPattern, ErrorMessage = ValidationMessages.InvalidPassword)]
-        public string Password { get; set; } = string.Empty;
-
-        [Required(ErrorMessage = ValidationMessages.Required)]
-        [Compare("Password", ErrorMessage = ValidationMessages.PasswordsDoNotMatch)]
-        public string ConfirmPassword { get; set; } = string.Empty;
-
-        [Required(ErrorMessage = ValidationMessages.Required)]
         [StringLength(20, ErrorMessage = ValidationMessages.InvalidLength)]
         [RegularExpression(ValidationPatterns.PhonePattern, ErrorMessage = ValidationMessages.InvalidPhone)]
         public string Phone { get; set; } = string.Empty;
+
+        public List<Order> Orders { get; set; } = new();
     }
 }

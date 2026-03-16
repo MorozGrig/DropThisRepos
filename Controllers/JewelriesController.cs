@@ -118,8 +118,9 @@ namespace DropThisSite.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["IdJewelryTip"] = new SelectList(_context.JewelryTips, "IdJewelryTip", "NameJewelryTip", jewelry.IdJewelryTip);
             ViewData["IdMaterial"] = new SelectList(_context.Materials, "IdMaterial", "NameMaterial", jewelry.IdMaterial);
-            ViewData["IdStone"] = new SelectList(_context.Stones, "IdStone", "ColorStone", jewelry.IdStone);
+            ViewData["IdStone"] = new SelectList(_context.Stones, "IdStone", "NameStone", jewelry.IdStone);
             ViewData["IdSupplier"] = new SelectList(_context.Suppliers, "IdSupplier", "NameSupplier", jewelry.IdSupplier);
             return View(jewelry);
         }
@@ -136,8 +137,9 @@ namespace DropThisSite.Controllers
             {
                 return NotFound();
             }
+            ViewData["IdJewelryTip"] = new SelectList(_context.JewelryTips, "IdJewelryTip", "NameJewelryTip", jewelry.IdJewelryTip);
             ViewData["IdMaterial"] = new SelectList(_context.Materials, "IdMaterial", "NameMaterial", jewelry.IdMaterial);
-            ViewData["IdStone"] = new SelectList(_context.Stones, "IdStone", "ColorStone", jewelry.IdStone);
+            ViewData["IdStone"] = new SelectList(_context.Stones, "IdStone", "NameStone", jewelry.IdStone);
             ViewData["IdSupplier"] = new SelectList(_context.Suppliers, "IdSupplier", "NameSupplier", jewelry.IdSupplier);
             return View(jewelry);
         }
@@ -193,8 +195,9 @@ namespace DropThisSite.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["IdJewelryTip"] = new SelectList(_context.JewelryTips, "IdJewelryTip", "NameJewelryTip", jewelry.IdJewelryTip);
             ViewData["IdMaterial"] = new SelectList(_context.Materials, "IdMaterial", "NameMaterial", jewelry.IdMaterial);
-            ViewData["IdStone"] = new SelectList(_context.Stones, "IdStone", "ColorStone", jewelry.IdStone);
+            ViewData["IdStone"] = new SelectList(_context.Stones, "IdStone", "NameStone", jewelry.IdStone);
             ViewData["IdSupplier"] = new SelectList(_context.Suppliers, "IdSupplier", "NameSupplier", jewelry.IdSupplier);
             return View(jewelry);
         }

@@ -57,7 +57,7 @@ namespace DropThisSite.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdUser,Login,Password,Email,IdRole")] User user)
+        public async Task<IActionResult> Create([Bind("IdUser,Login,Password,Email,Phone,IdRole")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace DropThisSite.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdUser,Login,Password,Email,IdRole")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("IdUser,Login,Password,Email,Phone,IdRole")] User user)
         {
             if (id != user.IdUser)
             {
