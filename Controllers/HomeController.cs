@@ -61,14 +61,26 @@ namespace DropThisSite.Controllers
             var jewelryExists = _context.Jewelries.Any(j => j.IdJewelry == id);
             if (!jewelryExists)
             {
-                return NotFound(new { error = "Товар не найден" });
+                if (IsAjaxRequest())
+                {
+                    return NotFound(new { error = "Товар не найден" });
+                }
+
+                TempData["Error"] = "Товар не найден";
+                return RedirectToAction(nameof(Index));
             }
 
             var cart = GetCartFromSession();
             cart.Add(id);
             SetCartInSession(cart);
 
-            return Json(new { count = cart.Count });
+            if (IsAjaxRequest())
+            {
+                return Json(new { count = cart.Count });
+            }
+
+            TempData["Success"] = "Товар добавлен в корзину";
+            return RedirectToAction(nameof(Cart));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -90,6 +102,12 @@ namespace DropThisSite.Controllers
             HttpContext.Session.SetString("Cart", JsonSerializer.Serialize(cart));
         }
 
+
+
+        private bool IsAjaxRequest()
+        {
+            return string.Equals(Request.Headers["X-Requested-With"], "XMLHttpRequest", StringComparison.OrdinalIgnoreCase);
+        }
 
         [HttpPost]
         public IActionResult UpdateCartItem(int id, int quantity)

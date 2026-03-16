@@ -61,6 +61,7 @@ async function addToCart(button) {
 
         const response = await fetch('/Home/AddToCart', {
             method: 'POST',
+            headers: { 'X-Requested-With': 'XMLHttpRequest' },
             body: formData
         });
 

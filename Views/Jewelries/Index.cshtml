@@ -1,4 +1,4 @@
-@model List<DropThisSite.Models.Jewelry>
+﻿@model List<DropThisSite.Models.Jewelry>
 
 <div class="container my-5">
     <h1 class="display-4 fw-bold mb-5 text-center">💎 Каталог ювелирных изделий</h1>
@@ -240,6 +240,7 @@
 
             const response = await fetch('/Home/AddToCart', {
                 method: 'POST',
+                headers: { 'X-Requested-With': 'XMLHttpRequest' },
                 body: formData
             });
 
