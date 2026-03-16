@@ -16,16 +16,20 @@ namespace DropThisSite.Models
         [ForeignKey("IdJewelry")]
         public Jewelry? Jewelry { get; set; }
 
-        [StringLength(100)]
+        [Required, StringLength(ValidationPatterns.MediumTextMaxLength)]
+        [RegularExpression(ValidationPatterns.SafeTextPattern)]
         public string? CustomerName { get; set; }
 
-        [StringLength(30)]
+        [Required, StringLength(20)]
+        [Phone]
+        [RegularExpression(ValidationPatterns.PhonePattern)]
         public string? CustomerPhone { get; set; }
 
-        [StringLength(100)]
+        [Required, StringLength(ValidationPatterns.MediumTextMaxLength)]
+        [EmailAddress]
         public string? CustomerEmail { get; set; }
 
-        [StringLength(250)]
+        [Required, StringLength(ValidationPatterns.LongTextMaxLength)]
         public string? DeliveryAddress { get; set; }
 
         public int IdStatusOrder { get; set; }
@@ -35,10 +39,10 @@ namespace DropThisSite.Models
         [Required]
         public DateTime OrderDate { get; set; }
 
-        [Required, Range(0, 100)]
+        [Required, Range(1, 100)]
         public int Quantity { get; set; }
 
-        [Required]
+        [Required, Range(0, 100000000)]
         public int TotalPrice { get; set; }
 
         public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();

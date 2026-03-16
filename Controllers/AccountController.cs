@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DropThisSite.Data;
 using DropThisSite.Models;
+using DropThisSite.Models.ViewModels;
 using System.Security.Claims;
 
 namespace DropThisSite.Controllers
@@ -17,61 +18,69 @@ namespace DropThisSite.Controllers
             _context = context;
         }
 
-        public IActionResult Login() => View();
+        public IActionResult Login() => View(new LoginViewModel());
 
         [HttpPost]
-        public async Task<IActionResult> Login(string login, string password)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model)
         {
+            if (!ModelState.IsValid)
+                return View(model);
+
             var user = await _context.Users
                 .Include(u => u.Role)
-                .FirstOrDefaultAsync(u => u.Login == login && u.Password == password);
+                .FirstOrDefaultAsync(u => u.Login == model.Login && u.Password == model.Password);
 
             if (user != null)
             {
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, user.Login),
-                    new Claim(ClaimTypes.Email, user.Email ?? ""),
+                    new Claim(ClaimTypes.Name, user.Login ?? string.Empty),
+                    new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
                     new Claim("UserId", user.IdUser.ToString())
                 };
 
                 if (user.Role != null)
                     claims.Add(new Claim(ClaimTypes.Role, user.Role.NameRole ?? "User"));
 
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme)));
 
                 return RedirectToAction("Index", "Home");
             }
 
             ViewBag.Error = "Неверный логин или пароль";
-            return View();
+            return View(model);
         }
 
-        public IActionResult Register() => View();
+        public IActionResult Register() => View(new RegisterViewModel());
 
         [HttpPost]
-        public async Task<IActionResult> Register(string login, string email, string password, string phone)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            if (_context.Users.Any(u => u.Login == login || u.Email == email))
+            if (!ModelState.IsValid)
+                return View(model);
+
+            if (_context.Users.Any(u => u.Login == model.Login || u.Email == model.Email))
             {
                 ViewBag.Error = "Логин или email занят";
-                return View();
+                return View(model);
             }
 
             var user = new User
             {
-                Login = login,
-                Email = email,
-                Phone = phone,
-                Password = password,
-                IdRole = 2 // Пользователь
+                Login = model.Login,
+                Email = model.Email,
+                Phone = model.Phone,
+                Password = model.Password,
+                IdRole = 2
             };
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            await Login(login, password);
+            await Login(new LoginViewModel { Login = model.Login, Password = model.Password });
             return RedirectToAction("Index", "Home");
         }
 

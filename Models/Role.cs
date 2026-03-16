@@ -8,7 +8,8 @@ namespace DropThisSite.Models
         public int IdRole { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(ValidationPatterns.ShortTextMaxLength)]
+        [RegularExpression(ValidationPatterns.SafeTextPattern)]
         public string? NameRole { get; set; }
 
         public ICollection<User>? Users { get; set; }
