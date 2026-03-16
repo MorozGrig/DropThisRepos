@@ -29,12 +29,7 @@
                 </div>
             </div>
 
-            <div class="d-grid gap-2 d-md-flex">
-                <button type="button" id="addToCartBtn" data-id="@Model.IdJewelry" class="btn btn-success btn-lg px-4">
-                    <i class="fas fa-shopping-cart me-2"></i>Добавить в корзину
-                </button>
-                <a asp-action="Index" class="btn btn-outline-secondary btn-lg px-4">Назад в каталог</a>
-            </div>
+
 
             @if (User.IsInRole("Админ"))
             {
