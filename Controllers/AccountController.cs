@@ -51,7 +51,7 @@ namespace DropThisSite.Controllers
         public IActionResult Register() => View();
 
         [HttpPost]
-        public async Task<IActionResult> Register(string login, string email, string password)
+        public async Task<IActionResult> Register(string login, string email, string password, string phone)
         {
             if (_context.Users.Any(u => u.Login == login || u.Email == email))
             {
@@ -63,6 +63,7 @@ namespace DropThisSite.Controllers
             {
                 Login = login,
                 Email = email,
+                Phone = phone,
                 Password = password,
                 IdRole = 2 // Пользователь
             };

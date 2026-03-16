@@ -88,7 +88,6 @@ namespace DropThisSite.Controllers
 
             SetCartInSession(cart);
 
-            // ✅ ТОЧНЫЙ ПОДСЧЁТ: цена × количество для ВСЕХ товаров
             decimal totalPrice = 0;
             var jewelryPrices = _context.Jewelries
                 .Where(j => cart.Contains(j.IdJewelry))

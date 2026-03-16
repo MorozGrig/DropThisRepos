@@ -1,0 +1,67 @@
+﻿@model List<Order>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="px-4 py-4">
+    <h2>📦 Все заказы <span class="badge bg-primary">@Model.Count</span></h2>
+
+    <div class="table-responsive mt-4">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Клиент</th>
+                    <th>Телефон</th>
+                    <th>Дата</th>
+                    <th>Статус</th>
+                    <th>Сумма</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model)
+                {
+                    <tr>
+                        <td>#@order.IdOrder</td>
+                        <td>@order.User?.Login</td>
+                        <td>@order.User?.Phone</td>
+                        <td>@order.OrderDate.ToString("dd.MM HH:mm")</td>
+                        <td>
+                            <select class="form-select form-select-sm status-select"
+                                    data-id="@order.IdOrder" style="width:140px">
+                                @foreach (var status in ViewBag.Statuses as List<StatusOrder>)
+                                {
+                                    <option value="@status.IdStatusOrder"
+                                            selected="@(order.IdStatusOrder == status.IdStatusOrder)">
+                                        @status.NameStatusOrder
+                                    </option>
+                                }
+                            </select>
+                        </td>
+                        <td><strong>@order.TotalPrice ₽</strong></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.status-select').forEach(select => {
+        select.addEventListener('change', async function() {
+            const orderId = this.dataset.id;
+            const statusId = this.value;
+
+            const response = await fetch('/AdminOrders/UpdateStatus', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: `id=${orderId}&statusId=${statusId}`
+            });
+
+            if (response.ok) {
+                this.classList.add('border-success');
+                setTimeout(() => this.classList.remove('border-success'), 1000);
+            }
+        });
+    });
+</script>

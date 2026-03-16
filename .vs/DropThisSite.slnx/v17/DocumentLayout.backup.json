@@ -1,26 +1,102 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\MorozGrig\\DropThisRepos\\",
+  "WorkspaceRootPath": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\morozgrig\\dropthisrepos\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\morozgrig\\dropthisrepos\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\adminorders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\adminorders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\morozgrig\\dropthisrepos\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\controllers\\adminorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:controllers\\adminorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\morozgrig\\dropthisrepos\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\morozgrig\\dropthisrepos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\models\\jewelry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:models\\jewelry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\models\\stone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:models\\stone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\stones\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\stones\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\stones\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\stones\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\stones\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\stones\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\stones\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\stones\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\stones\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\stones\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\jewelries\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\jewelries\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\jewelries\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\jewelries\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|s:\\users\\53-04k\\\u043C\u043E\u0440\u043E\u0437 \u0433\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0438\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0443\u0447\u043F\u0440\u0430\u043A\\dropthisrepos\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC9AC1B-1E38-0214-E629-89B03B362A52}|DropThisSite.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,67 +111,297 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\MorozGrig\\DropThisRepos\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\MorozGrig\\DropThisRepos\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAYAAAAAAAAAA==",
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Shared\\_AdminLayout.cshtml*",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAABqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-13T07:32:25.436Z",
+              "WhenOpened": "2026-03-16T08:20:15.394Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "site.css",
-              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\MorozGrig\\DropThisRepos\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\MorozGrig\\DropThisRepos\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAACwBAAAAAAAAAAAAAPgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-13T06:32:07.485Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\AdminOrders\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\AdminOrders\\Index.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\AdminOrders\\Index.cshtml*",
+              "RelativeToolTip": "Views\\AdminOrders\\Index.cshtml*",
+              "ViewState": "AgIAAAUAAAAAAAAAAADgvx8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T08:19:06.582Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AdminOrdersController.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\AdminOrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminOrdersController.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\AdminOrdersController.cs*",
+              "RelativeToolTip": "Controllers\\AdminOrdersController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T08:16:52.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Models\\Supplier.cs",
+              "RelativeDocumentMoniker": "Models\\Supplier.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Models\\Supplier.cs",
+              "RelativeToolTip": "Models\\Supplier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T06:32:57.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "Data\\SeedData.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Data\\SeedData.cs",
+              "RelativeToolTip": "Data\\SeedData.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwDgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T06:19:32.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Jewelry.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Models\\Jewelry.cs",
+              "RelativeDocumentMoniker": "Models\\Jewelry.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Models\\Jewelry.cs",
+              "RelativeToolTip": "Models\\Jewelry.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T06:30:25.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T05:58:44.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwCEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T05:55:05.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stones\\Edit.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Stones\\Edit.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAIAwwBYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T05:54:58.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stones\\Details.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Details.cshtml",
+              "RelativeToolTip": "Views\\Stones\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T05:54:55.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stones\\Delete.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Stones\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T05:53:57.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stones\\Create.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Create.cshtml",
+              "RelativeToolTip": "Views\\Stones\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T05:53:55.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Orders\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\Index.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Orders\\Index.cshtml",
+              "RelativeToolTip": "Views\\Orders\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T05:53:53.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\MorozGrig\\DropThisRepos\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\MorozGrig\\DropThisRepos\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBAAAABoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBAAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-13T06:06:59.598Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\MorozGrig\\DropThisRepos\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\MorozGrig\\DropThisRepos\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwDQAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T06:06:01.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T06:59:20.872Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 17,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Jewelries\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Jewelries\\Details.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Jewelries\\Details.cshtml",
+              "RelativeToolTip": "Views\\Jewelries\\Details.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAIAwwB0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T05:53:39.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "appsettings.json",
-              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\MorozGrig\\DropThisRepos\\appsettings.json",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\MorozGrig\\DropThisRepos\\appsettings.json",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-13T05:58:49.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T05:58:49.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Jewelries\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Jewelries\\Delete.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Jewelries\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Jewelries\\Delete.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAIAwwCQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T05:53:19.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Cart.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Home\\Cart.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Cart.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Home\\Cart.cshtml",
+              "RelativeToolTip": "Views\\Home\\Cart.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAIAwwCwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T05:53:00.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Stone.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Models\\Stone.cs",
+              "RelativeDocumentMoniker": "Models\\Stone.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Models\\Stone.cs",
+              "RelativeToolTip": "Models\\Stone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T05:51:46.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stones\\Index.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Stones\\Index.cshtml",
+              "RelativeToolTip": "Views\\Stones\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAIAwwCEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T05:55:01.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T07:32:25.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "site.css",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAACwBAAAAAAAAAAAAAPgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-13T06:32:07.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "S:\\USERS\\53-04k\\\u041C\u043E\u0440\u043E\u0437 \u0413\u0440\u0438\u0433\u043E\u0440\u0438\u0439 \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447\\\u0423\u0427\u041F\u0420\u0410\u041A\\DropThisRepos\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwDQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T06:06:01.652Z"
             }
           ]
         }
