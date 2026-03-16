@@ -142,6 +142,28 @@ namespace DropThisSite.Controllers
             return View(jewelry);
         }
 
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var jewelry = await _context.Jewelries
+                .Include(j => j.JewelryTip)
+                .Include(j => j.Material)
+                .Include(j => j.Stone)
+                .Include(j => j.Supplier)
+                .FirstOrDefaultAsync(m => m.IdJewelry == id);
+
+            if (jewelry == null)
+            {
+                return NotFound();
+            }
+
+            return View(jewelry);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdJewelry,NameJewelry,IdJewelryTip,IdMaterial,IdStone,IdSupplier,PriceJewelry")] Jewelry jewelry)

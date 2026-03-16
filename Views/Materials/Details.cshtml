@@ -1,13 +1,13 @@
 ﻿@model DropThisSite.Models.Material
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Подробнее";
 }
 
-<h1>Details</h1>
+<h1>Подробнее</h1>
 
 <div>
-    <h4>Material</h4>
+    <h4>Материал</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -25,6 +25,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdMaterial">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.IdMaterial">Редактировать</a> |
+    <a asp-action="Index">Назад к списку</a>
 </div>
