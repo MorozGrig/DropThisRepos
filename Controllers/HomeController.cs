@@ -3,20 +3,30 @@ using DropThisSite.Models;
 using DropThisSite.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace DropThisSite.Controllers
 {
     public class HomeController : Controller
     {
+        private const string InvalidAddressMessage = "Введите корректный адрес или выберите его из списка подсказок.";
+
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _context;
+        private readonly IHttpClientFactory _httpClientFactory;
+        private readonly IConfiguration _configuration;
 
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+        public HomeController(
+            ILogger<HomeController> logger,
+            ApplicationDbContext context,
+            IHttpClientFactory httpClientFactory,
+            IConfiguration configuration)
         {
             _logger = logger;
             _context = context;
+            _httpClientFactory = httpClientFactory;
+            _configuration = configuration;
         }
 
         public IActionResult Index()
@@ -89,7 +99,6 @@ namespace DropThisSite.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        // ✅ СЕССИЯ List<int>
         private List<int> GetCartFromSession()
         {
             var json = HttpContext.Session.GetString("Cart");
@@ -101,8 +110,6 @@ namespace DropThisSite.Controllers
         {
             HttpContext.Session.SetString("Cart", JsonSerializer.Serialize(cart));
         }
-
-
 
         private bool IsAjaxRequest()
         {
@@ -143,7 +150,6 @@ namespace DropThisSite.Controllers
             });
         }
 
-
         [HttpPost]
         public IActionResult RemoveFromCart(int id)
         {
@@ -156,24 +162,29 @@ namespace DropThisSite.Controllers
         }
 
         [HttpGet]
-        public IActionResult Checkout()
+        public async Task<IActionResult> Checkout()
         {
             var cart = GetCartFromSession();
             if (cart.Count == 0)
                 return RedirectToAction("Cart");
 
             ViewBag.CartIds = cart;
-            var groupedCart = cart
-                .GroupBy(id => id)
-                .ToDictionary(g => g.Key, g => g.Count());
+            SetCheckoutSummary(cart);
+            SetYandexApiKey();
 
-            var prices = _context.Jewelries
-                .Where(j => groupedCart.Keys.Contains(j.IdJewelry))
-                .ToDictionary(j => j.IdJewelry, j => j.PriceJewelry);
+            var model = new CheckoutViewModel();
 
-            ViewBag.TotalPrice = groupedCart.Sum(i => prices.TryGetValue(i.Key, out var price) ? price * i.Value : 0);
+            if (int.TryParse(User.FindFirst("UserId")?.Value, out var userId) && userId > 0)
+            {
+                var user = await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.IdUser == userId);
+                if (user != null)
+                {
+                    model.Email = user.Email ?? string.Empty;
+                    model.Phone = user.Phone ?? string.Empty;
+                }
+            }
 
-            return View(new CheckoutViewModel());
+            return View(model);
         }
 
         [HttpPost]
@@ -184,14 +195,17 @@ namespace DropThisSite.Controllers
             if (cart.Count == 0)
                 return RedirectToAction("Index");
 
+            ViewBag.CartIds = cart;
+            SetCheckoutSummary(cart);
+            SetYandexApiKey();
+
+            if (!await IsAddressValidAsync(model))
+            {
+                ModelState.AddModelError(nameof(model.Address), InvalidAddressMessage);
+            }
+
             if (!ModelState.IsValid)
             {
-                var grouped = cart.GroupBy(id => id).ToDictionary(g => g.Key, g => g.Count());
-                var prices = _context.Jewelries
-                    .Where(j => grouped.Keys.Contains(j.IdJewelry))
-                    .ToDictionary(j => j.IdJewelry, j => j.PriceJewelry);
-
-                ViewBag.TotalPrice = grouped.Sum(i => prices.TryGetValue(i.Key, out var price) ? price * i.Value : 0);
                 return View("Checkout", model);
             }
 
@@ -243,5 +257,73 @@ namespace DropThisSite.Controllers
         }
 
 
+        private void SetYandexApiKey()
+        {
+            ViewBag.YandexApiKey = _configuration["YandexMaps:ApiKey"] ?? string.Empty;
+        }
+
+        private void SetCheckoutSummary(List<int> cart)
+        {
+            var groupedCart = cart
+                .GroupBy(id => id)
+                .ToDictionary(g => g.Key, g => g.Count());
+
+            var prices = _context.Jewelries
+                .Where(j => groupedCart.Keys.Contains(j.IdJewelry))
+                .ToDictionary(j => j.IdJewelry, j => j.PriceJewelry);
+
+            ViewBag.TotalPrice = groupedCart.Sum(i => prices.TryGetValue(i.Key, out var price) ? price * i.Value : 0);
+        }
+
+        private async Task<bool> IsAddressValidAsync(CheckoutViewModel model)
+        {
+            if (string.IsNullOrWhiteSpace(model.Address))
+            {
+                return false;
+            }
+
+            if (model.IsAddressVerified)
+            {
+                return true;
+            }
+
+            var apiKey = _configuration["YandexMaps:ApiKey"];
+            if (string.IsNullOrWhiteSpace(apiKey))
+            {
+                _logger.LogWarning("YandexMaps API key is missing. Address verification fallback is disabled.");
+                return false;
+            }
+
+            var encodedAddress = Uri.EscapeDataString(model.Address);
+            var requestUri = $"https://geocode-maps.yandex.ru/1.x/?apikey={apiKey}&format=json&geocode={encodedAddress}";
+
+            try
+            {
+                var client = _httpClientFactory.CreateClient();
+                var response = await client.GetAsync(requestUri);
+                if (!response.IsSuccessStatusCode)
+                {
+                    return false;
+                }
+
+                using var stream = await response.Content.ReadAsStreamAsync();
+                using var doc = await JsonDocument.ParseAsync(stream);
+
+                var foundCountText = doc.RootElement
+                    .GetProperty("response")
+                    .GetProperty("GeoObjectCollection")
+                    .GetProperty("metaDataProperty")
+                    .GetProperty("GeocoderResponseMetaData")
+                    .GetProperty("found")
+                    .GetString();
+
+                return int.TryParse(foundCountText, out var foundCount) && foundCount > 0;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Failed to validate address via Yandex Geocoder API");
+                return false;
+            }
+        }
     }
 }
