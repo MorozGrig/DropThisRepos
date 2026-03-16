@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<DropThisSite.Models.Role>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Список";
 }
 
-<h1>Index</h1>
+<h1>Список</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Создать запись</a>
 </p>
 <table class="table">
     <thead>
@@ -25,9 +25,9 @@
                 @Html.DisplayFor(modelItem => item.NameRole)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdRole">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdRole">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdRole">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdRole">Редактировать</a> |
+                <a asp-action="Details" asp-route-id="@item.IdRole">Подробнее</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdRole">Удалить</a>
             </td>
         </tr>
 }

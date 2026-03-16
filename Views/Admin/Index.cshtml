@@ -1,32 +1,51 @@
 ﻿@{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Панель управления";
+    ViewData["Title"] = "Сводка";
 }
 
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2 text-warning">💎 Панель управления</h1>
+<div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+    <h1 class="h3 mb-0 text-warning">💎 Администрирование магазина</h1>
+    <a asp-controller="Jewelries" asp-action="Create" class="btn btn-warning">
+        <i class="fas fa-plus me-2"></i>Создать товар
+    </a>
 </div>
 
-<div class="row">
-    <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-warning shadow h-100 py-2">
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
             <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                            Товаров
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            @ViewBag.JewelryCount
-                        </div>
-                    </div>
-                    <i class="fas fa-gem fa-2x text-gray-300"></i>
-                </div>
+                <p class="text-muted mb-1">Товаров в каталоге</p>
+                <div class="fs-3 fw-bold">@ViewBag.JewelryCount</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+                <p class="text-muted mb-1">Пользователей</p>
+                <div class="fs-3 fw-bold">@ViewBag.UserCount</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+                <p class="text-muted mb-1">Заказов</p>
+                <div class="fs-3 fw-bold">@ViewBag.OrderCount</div>
             </div>
         </div>
     </div>
 </div>
 
-<a asp-controller="Jewelries" asp-action="Create" class="btn btn-warning btn-lg">
-    <i class="fas fa-plus me-2"></i>Добавить товар
-</a>
+<div class="card shadow-sm border-0">
+    <div class="card-header bg-white fw-semibold">Быстрые действия</div>
+    <div class="card-body">
+        <div class="d-flex flex-wrap gap-2">
+            <a asp-controller="Jewelries" asp-action="Index" class="btn btn-outline-primary">Управление товарами</a>
+            <a asp-controller="JewelryTips" asp-action="Index" class="btn btn-outline-primary">Управление категориями</a>
+            <a asp-controller="Suppliers" asp-action="Index" class="btn btn-outline-primary">Управление брендами</a>
+            <a asp-controller="AdminOrders" asp-action="Index" class="btn btn-outline-primary">Обработка заказов</a>
+            <a asp-controller="Users" asp-action="Index" class="btn btn-outline-primary">Управление пользователями</a>
+        </div>
+    </div>
+</div>

@@ -41,7 +41,7 @@ namespace DropThisSite.Controllers
                 };
 
                 if (user.Role != null)
-                    claims.Add(new Claim(ClaimTypes.Role, user.Role.NameRole ?? "User"));
+                    claims.Add(new Claim(ClaimTypes.Role, user.Role.NameRole ?? "Пользователь"));
 
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme)));
@@ -64,7 +64,7 @@ namespace DropThisSite.Controllers
 
             if (_context.Users.Any(u => u.Login == model.Login || u.Email == model.Email))
             {
-                ViewBag.Error = "Логин или email занят";
+                ViewBag.Error = "Логин или адрес электронной почты уже используется";
                 return View(model);
             }
 
