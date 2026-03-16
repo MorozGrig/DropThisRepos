@@ -31,6 +31,14 @@ namespace DropThisSite.Data
                 context.SaveChanges();
             }
 
+            if (!context.Users.Any())
+            {
+                context.Users.AddRange(
+                    new User { Login = "admin", Password = "admin1", Email = "admin@mail.ru", Phone = "+79315355564", IdRole = 1 }
+                );
+                context.SaveChanges();
+            }
+
             // 3. JewelryTips
             if (!context.JewelryTips.Any())
             {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jBWP1G83i9g=",
+  "dgSpecHash": "cu7uv983tnE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\FREED\\Desktop\\Lern\\DropThisRepos\\DropThisSite.csproj",
+  "projectFilePath": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\DropThisSite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FREED\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\FREED\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
