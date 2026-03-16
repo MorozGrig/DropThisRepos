@@ -44,14 +44,6 @@
                 <option value="0">Все поставщики</option>
                 @foreach (var supplier in ViewBag.Suppliers as List<DropThisSite.Models.Supplier>)
                 {
-                    if (supplier.IdSupplier == (int)ViewBag.SelectedSupplierId)
-                    {
-                        <option value="@supplier.IdSupplier" selected="selected">@supplier.NameSupplier</option>
-                    }
-                    else
-                    {
-                        <option value="@supplier.IdSupplier">@supplier.NameSupplier</option>
-                    }
                 }
             </select>
         </div>
