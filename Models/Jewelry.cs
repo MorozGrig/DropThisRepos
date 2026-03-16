@@ -32,5 +32,7 @@ namespace DropThisSite.Models
         public int PriceJewelry { get; set; }
 
         public ICollection<Order>? Orders { get; set; }
+
+        public ICollection<OrderItem>? OrderItems { get; set; }
     }
 }

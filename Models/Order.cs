@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Runtime.CompilerServices;
 
 namespace DropThisSite.Models
 {
@@ -13,9 +12,21 @@ namespace DropThisSite.Models
         [ForeignKey("IdUser")]
         public User? User { get; set; }
 
-        public int IdJewelry { get; set; }
+        public int? IdJewelry { get; set; }
         [ForeignKey("IdJewelry")]
         public Jewelry? Jewelry { get; set; }
+
+        [StringLength(100)]
+        public string? CustomerName { get; set; }
+
+        [StringLength(30)]
+        public string? CustomerPhone { get; set; }
+
+        [StringLength(100)]
+        public string? CustomerEmail { get; set; }
+
+        [StringLength(250)]
+        public string? DeliveryAddress { get; set; }
 
         public int IdStatusOrder { get; set; }
         [ForeignKey("IdStatusOrder")]
@@ -29,5 +40,7 @@ namespace DropThisSite.Models
 
         [Required]
         public int TotalPrice { get; set; }
+
+        public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     }
 }
