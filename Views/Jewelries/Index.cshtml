@@ -1,4 +1,4 @@
-﻿@model List<DropThisSite.Models.Jewelry>
+@model List<DropThisSite.Models.Jewelry>
 
 <div class="container my-5">
     <h1 class="display-4 fw-bold mb-5 text-center">💎 Каталог ювелирных изделий</h1>
@@ -9,7 +9,14 @@
                 <option value="0">Все категории</option>
                 @foreach (var tip in ViewBag.JewelryTips as List<DropThisSite.Models.JewelryTip>)
                 {
-                    <option value="@tip.IdJewelryTip" @(tip.IdJewelryTip == (int)ViewBag.SelectedCategoryId ? "selected" : null)>@tip.NameJewelryTip</option>
+                    if (tip.IdJewelryTip == (int)ViewBag.SelectedCategoryId)
+                    {
+                        <option value="@tip.IdJewelryTip" selected="selected">@tip.NameJewelryTip</option>
+                    }
+                    else
+                    {
+                        <option value="@tip.IdJewelryTip">@tip.NameJewelryTip</option>
+                    }
                 }
             </select>
         </div>
@@ -19,7 +26,14 @@
                 <option value="0">Все бренды</option>
                 @foreach (var material in ViewBag.Materials as List<DropThisSite.Models.Material>)
                 {
-                    <option value="@material.IdMaterial" @(material.IdMaterial == (int)ViewBag.SelectedMaterialId ? "selected" : null)>@material.NameMaterial</option>
+                    if (material.IdMaterial == (int)ViewBag.SelectedMaterialId)
+                    {
+                        <option value="@material.IdMaterial" selected="selected">@material.NameMaterial</option>
+                    }
+                    else
+                    {
+                        <option value="@material.IdMaterial">@material.NameMaterial</option>
+                    }
                 }
             </select>
         </div>
@@ -30,24 +44,77 @@
                 <option value="0">Все поставщики</option>
                 @foreach (var supplier in ViewBag.Suppliers as List<DropThisSite.Models.Supplier>)
                 {
-                    <option value="@supplier.IdSupplier" @(supplier.IdSupplier == (int)ViewBag.SelectedSupplierId ? "selected" : null)>@supplier.NameSupplier</option>
                 }
             </select>
         </div>
         <div class="col-md-2">
             <select name="priceRange" class="form-select" onchange="this.form.submit()">
-                <option value="" @(string.IsNullOrEmpty((string)ViewBag.SelectedPriceRange) ? "selected" : null)>Все цены</option>
-                <option value="0-10000" @("0-10000" == (string)ViewBag.SelectedPriceRange ? "selected" : null)>До 10 000 ₽</option>
-                <option value="10000-50000" @("10000-50000" == (string)ViewBag.SelectedPriceRange ? "selected" : null)>10 000 - 50 000 ₽</option>
-                <option value="50000+" @("50000+" == (string)ViewBag.SelectedPriceRange ? "selected" : null)>50 000+ ₽</option>
+                @if (string.IsNullOrEmpty((string)ViewBag.SelectedPriceRange))
+                {
+                    <option value="" selected="selected">Все цены</option>
+                }
+                else
+                {
+                    <option value="">Все цены</option>
+                }
+
+                @if ("0-10000" == (string)ViewBag.SelectedPriceRange)
+                {
+                    <option value="0-10000" selected="selected">До 10 000 ₽</option>
+                }
+                else
+                {
+                    <option value="0-10000">До 10 000 ₽</option>
+                }
+
+                @if ("10000-50000" == (string)ViewBag.SelectedPriceRange)
+                {
+                    <option value="10000-50000" selected="selected">10 000 - 50 000 ₽</option>
+                }
+                else
+                {
+                    <option value="10000-50000">10 000 - 50 000 ₽</option>
+                }
+
+                @if ("50000+" == (string)ViewBag.SelectedPriceRange)
+                {
+                    <option value="50000+" selected="selected">50 000+ ₽</option>
+                }
+                else
+                {
+                    <option value="50000+">50 000+ ₽</option>
+                }
             </select>
         </div>
 
         <div class="col-md-2">
             <select name="sort" class="form-select" onchange="this.form.submit()">
-                <option value="" @(string.IsNullOrEmpty((string)ViewBag.SelectedSort) ? "selected" : null)>Без сортировки</option>
-                <option value="price_asc" @("price_asc" == (string)ViewBag.SelectedSort ? "selected" : null)>Цена ↑</option>
-                <option value="price_desc" @("price_desc" == (string)ViewBag.SelectedSort ? "selected" : null)>Цена ↓</option>
+                @if (string.IsNullOrEmpty((string)ViewBag.SelectedSort))
+                {
+                    <option value="" selected="selected">Без сортировки</option>
+                }
+                else
+                {
+                    <option value="">Без сортировки</option>
+                }
+
+                @if ("price_asc" == (string)ViewBag.SelectedSort)
+                {
+                    <option value="price_asc" selected="selected">Цена ↑</option>
+                }
+                else
+                {
+                    <option value="price_asc">Цена ↑</option>
+                }
+
+                @if ("price_desc" == (string)ViewBag.SelectedSort)
+                {
+                    <option value="price_desc" selected="selected">Цена ↓</option>
+                }
+                else
+                {
+                    <option value="price_desc">Цена ↓</option>
+                }
             </select>
         </div>
 
