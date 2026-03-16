@@ -1,60 +1,47 @@
-﻿@model DropThisSite.Models.Jewelry
-
+@model DropThisSite.Models.Jewelry
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Редактирование";
+    ViewData["Title"] = "Редактирование украшения";
 }
 
-<h1>Редактировать</h1>
-
-<h4>Украшение</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="IdJewelry" />
-            <div class="form-group">
-                <label asp-for="NameJewelry" class="control-label"></label>
-                <input asp-for="NameJewelry" class="form-control" />
-                <span asp-validation-for="NameJewelry" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdJewelryTip" class="control-label"></label>
-                <input asp-for="IdJewelryTip" class="form-control" />
-                <span asp-validation-for="IdJewelryTip" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdMaterial" class="control-label"></label>
-                <select asp-for="IdMaterial" class="form-control" asp-items="ViewBag.IdMaterial"></select>
-                <span asp-validation-for="IdMaterial" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdStone" class="control-label"></label>
-                <select asp-for="IdStone" class="form-control" asp-items="ViewBag.IdStone"></select>
-                <span asp-validation-for="IdStone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdSupplier" class="control-label"></label>
-                <select asp-for="IdSupplier" class="form-control" asp-items="ViewBag.IdSupplier"></select>
-                <span asp-validation-for="IdSupplier" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PriceJewelry" class="control-label"></label>
-                <input asp-for="PriceJewelry" class="form-control" />
-                <span asp-validation-for="PriceJewelry" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Сохранить" class="btn btn-primary" />
-            </div>
-        </form>
+<h1 class="h3 mb-3">Редактировать украшение</h1>
+<div class="card shadow-sm"><div class="card-body">
+<form asp-action="Edit" class="row g-3">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="IdJewelry" />
+    <div class="col-md-6">
+        <label asp-for="NameJewelry" class="form-label"></label>
+        <input asp-for="NameJewelry" class="form-control" />
+        <span asp-validation-for="NameJewelry" class="text-danger"></span>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Назад к списку</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    <div class="col-md-6">
+        <label asp-for="IdJewelryTip" class="form-label"></label>
+        <select asp-for="IdJewelryTip" class="form-select" asp-items="ViewBag.IdJewelryTip"></select>
+        <span asp-validation-for="IdJewelryTip" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="IdMaterial" class="form-label"></label>
+        <select asp-for="IdMaterial" class="form-select" asp-items="ViewBag.IdMaterial"></select>
+        <span asp-validation-for="IdMaterial" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="IdStone" class="form-label"></label>
+        <select asp-for="IdStone" class="form-select" asp-items="ViewBag.IdStone"></select>
+        <span asp-validation-for="IdStone" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="IdSupplier" class="form-label"></label>
+        <select asp-for="IdSupplier" class="form-select" asp-items="ViewBag.IdSupplier"></select>
+        <span asp-validation-for="IdSupplier" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="PriceJewelry" class="form-label"></label>
+        <input asp-for="PriceJewelry" class="form-control" />
+        <span asp-validation-for="PriceJewelry" class="text-danger"></span>
+    </div>
+    <div class="col-12 d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Отмена</a>
+    </div>
+</form></div></div>
+@section Scripts { @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} }

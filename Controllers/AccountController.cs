@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DropThisSite.Data;
@@ -82,6 +83,69 @@ namespace DropThisSite.Controllers
 
             await Login(new LoginViewModel { Login = model.Login, Password = model.Password });
             return RedirectToAction("Index", "Home");
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Profile()
+        {
+            if (!int.TryParse(User.FindFirst("UserId")?.Value, out var userId) || userId <= 0)
+                return Challenge();
+
+            var user = await _context.Users
+                .Include(u => u.Orders!)
+                    .ThenInclude(o => o.StatusOrder)
+                .Include(u => u.Orders!)
+                    .ThenInclude(o => o.OrderItems)
+                        .ThenInclude(oi => oi.Jewelry)
+                .FirstOrDefaultAsync(u => u.IdUser == userId);
+
+            if (user == null)
+                return NotFound();
+
+            var model = new ProfileViewModel
+            {
+                Login = user.Login ?? string.Empty,
+                Email = user.Email ?? string.Empty,
+                Phone = user.Phone ?? string.Empty,
+                Orders = user.Orders?.OrderByDescending(o => o.OrderDate).ToList() ?? new List<Order>()
+            };
+
+            return View(model);
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Profile(ProfileViewModel model)
+        {
+            if (!int.TryParse(User.FindFirst("UserId")?.Value, out var userId) || userId <= 0)
+                return Challenge();
+
+            var user = await _context.Users
+                .Include(u => u.Orders!)
+                    .ThenInclude(o => o.StatusOrder)
+                .Include(u => u.Orders!)
+                    .ThenInclude(o => o.OrderItems)
+                        .ThenInclude(oi => oi.Jewelry)
+                .FirstOrDefaultAsync(u => u.IdUser == userId);
+
+            if (user == null)
+                return NotFound();
+
+            if (!ModelState.IsValid)
+            {
+                model.Orders = user.Orders?.OrderByDescending(o => o.OrderDate).ToList() ?? new List<Order>();
+                return View(model);
+            }
+
+            user.Login = model.Login;
+            user.Email = model.Email;
+            user.Phone = model.Phone;
+
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Профиль успешно обновлен";
+            return RedirectToAction(nameof(Profile));
         }
 
         public async Task<IActionResult> Logout()

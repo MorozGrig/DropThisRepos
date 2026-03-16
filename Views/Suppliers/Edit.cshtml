@@ -1,44 +1,32 @@
-﻿@model DropThisSite.Models.Supplier
-
+@model DropThisSite.Models.Supplier
 @{
-    ViewData["Title"] = "Редактирование";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Редактирование бренда";
 }
 
-<h1>Редактировать</h1>
-
-<h4>Бренд</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="IdSupplier" />
-            <div class="form-group">
-                <label asp-for="NameSupplier" class="control-label"></label>
-                <input asp-for="NameSupplier" class="form-control" />
-                <span asp-validation-for="NameSupplier" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhoneSupplier" class="control-label"></label>
-                <input asp-for="PhoneSupplier" class="form-control" />
-                <span asp-validation-for="PhoneSupplier" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EmailSupplier" class="control-label"></label>
-                <input asp-for="EmailSupplier" class="form-control" />
-                <span asp-validation-for="EmailSupplier" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Сохранить" class="btn btn-primary" />
-            </div>
-        </form>
+<h1 class="h3 mb-3">Редактировать бренд</h1>
+<div class="card shadow-sm"><div class="card-body">
+<form asp-action="Edit" class="row g-3">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="IdSupplier" />
+    <div class="col-md-6">
+        <label asp-for="NameSupplier" class="form-label"></label>
+        <input asp-for="NameSupplier" class="form-control" />
+        <span asp-validation-for="NameSupplier" class="text-danger"></span>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Назад к списку</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    <div class="col-md-6">
+        <label asp-for="PhoneSupplier" class="form-label"></label>
+        <input asp-for="PhoneSupplier" class="form-control" placeholder="+7XXXXXXXXXX" />
+        <span asp-validation-for="PhoneSupplier" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="EmailSupplier" class="form-label"></label>
+        <input asp-for="EmailSupplier" class="form-control" />
+        <span asp-validation-for="EmailSupplier" class="text-danger"></span>
+    </div>
+    <div class="col-12 d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Отмена</a>
+    </div>
+</form></div></div>
+@section Scripts { @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} }

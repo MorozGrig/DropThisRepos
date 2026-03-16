@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DropThisSite.Data;
-using DropThisSite.Models;
 
 namespace DropThisSite.Controllers
 {
@@ -16,8 +15,10 @@ namespace DropThisSite.Controllers
             _context = context;
         }
 
-        // GET: Orders/Index (Мои заказы)
-        public async Task<IActionResult> Index()
+        public IActionResult Index() => RedirectToAction(nameof(History));
+
+        // GET: Orders/History (История заказов)
+        public async Task<IActionResult> History()
         {
             if (!int.TryParse(User.FindFirst("UserId")?.Value, out var userId) || userId <= 0)
             {
@@ -25,7 +26,7 @@ namespace DropThisSite.Controllers
             }
 
             var orders = await _context.Orders
-                                .Include(o => o.StatusOrder)
+                .Include(o => o.StatusOrder)
                 .Include(o => o.User)
                 .Include(o => o.OrderItems)
                     .ThenInclude(oi => oi.Jewelry)

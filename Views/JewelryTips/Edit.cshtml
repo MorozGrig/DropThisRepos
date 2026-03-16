@@ -1,34 +1,21 @@
-﻿@model DropThisSite.Models.JewelryTip
-
+@model DropThisSite.Models.JewelryTip
 @{
-    ViewData["Title"] = "Редактирование";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Редактирование категории";
 }
-
-<h1>Редактировать</h1>
-
-<h4>JewelryTip</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="IdJewelryTip" />
-            <div class="form-group">
-                <label asp-for="NameJewelryTip" class="control-label"></label>
-                <input asp-for="NameJewelryTip" class="form-control" />
-                <span asp-validation-for="NameJewelryTip" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Сохранить" class="btn btn-primary" />
-            </div>
-        </form>
+<h1 class="h3 mb-3">Редактировать категорию</h1>
+<div class="card shadow-sm"><div class="card-body">
+<form asp-action="Edit" class="row g-3">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="IdJewelryTip" />
+    <div class="col-md-6">
+        <label asp-for="NameJewelryTip" class="form-label"></label>
+        <input asp-for="NameJewelryTip" class="form-control" />
+        <span asp-validation-for="NameJewelryTip" class="text-danger"></span>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Назад к списку</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    <div class="col-12 d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Отмена</a>
+    </div>
+</form></div></div>
+@section Scripts { @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} }

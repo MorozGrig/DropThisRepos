@@ -1,0 +1,86 @@
+@model List<DropThisSite.Models.Order>
+
+<div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <h1 class="display-4 fw-bold text-warning">
+            <i class="fas fa-box me-2"></i>История заказов
+        </h1>
+        <a asp-controller="Jewelries" asp-action="Index" class="btn btn-outline-warning">
+            <i class="fas fa-shopping-bag me-2"></i>Продолжить покупки
+        </a>
+    </div>
+
+    @if (Model.Any())
+    {
+        @foreach (var order in Model)
+        {
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <strong>Заказ №@order.IdOrder от @order.OrderDate.ToString("dd.MM.yyyy HH:mm")</strong>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="badge bg-@(order.StatusOrder?.NameStatusOrder switch
+                             {
+                                "Новый" => "warning",
+                                "В обработке" => "info",
+                                "Отправлен" => "success",
+                                _ => "secondary"
+                             })">
+                                @order.StatusOrder?.NameStatusOrder
+                            </span>
+                        </div>
+                        <div class="col-md-3 text-end">
+                            <span class="h5 text-warning">@order.OrderItems.Sum(i => i.TotalPrice).ToString("N0") ₽</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h6 class="text-muted mb-3">Состав заказа (@order.OrderItems.Sum(i => i.Quantity) шт.)</h6>
+                            @foreach (var item in order.OrderItems)
+                            {
+                                <div class="border rounded p-2 mb-2">
+                                    <div class="d-flex justify-content-between">
+                                        <strong>@item.Jewelry?.NameJewelry</strong>
+                                        <span>@item.TotalPrice.ToString("N0") ₽</span>
+                                    </div>
+                                    <div class="text-muted small">
+                                        @item.Quantity шт. × @item.UnitPrice.ToString("N0") ₽
+                                        @if (item.Jewelry?.Material != null)
+                                        {
+                                            <span> · @item.Jewelry.Material.NameMaterial</span>
+                                        }
+                                        @if (item.Jewelry?.Stone != null)
+                                        {
+                                            <span> · @item.Jewelry.Stone.ColorStone</span>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="col-md-5">
+                            <p><strong>Получатель:</strong> @(order.CustomerName ?? order.User?.Login)</p>
+                            <p><strong>Телефон:</strong> @(order.CustomerPhone ?? order.User?.Phone)</p>
+                            <p><strong>Email:</strong> @(order.CustomerEmail ?? order.User?.Email)</p>
+                            <p><strong>Адрес доставки:</strong> @(order.DeliveryAddress ?? "Не указан")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="text-center py-5">
+            <i class="fas fa-inbox fa-5x text-muted mb-4"></i>
+            <h3 class="text-muted">У вас пока нет заказов</h3>
+            <p class="lead text-muted">Оформите первый заказ в каталоге!</p>
+            <a asp-controller="Jewelries" asp-action="Index" class="btn btn-warning btn-lg">
+                <i class="fas fa-gem me-2"></i>Перейти в каталог
+            </a>
+        </div>
+    }
+</div>
