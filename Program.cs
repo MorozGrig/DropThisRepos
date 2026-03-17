@@ -25,6 +25,14 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<ApplicationDbContext>();
     context.Database.Migrate();
+
+    context.Database.ExecuteSqlRaw(@"
+IF COL_LENGTH('Jewelries', 'ImagePath') IS NULL
+BEGIN
+    ALTER TABLE [Jewelries] ADD [ImagePath] nvarchar(255) NULL;
+END
+");
+
     SeedData.Initialize(services);
 }
 
