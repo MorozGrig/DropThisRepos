@@ -11,7 +11,10 @@ namespace DropThisSite.Models
         public const string InvalidAddress = "Выберите корректный адрес на карте";
         public const string InvalidSelection = "Выберите значение из списка";
         public const string InvalidPrice = "Цена должна быть больше нуля";
+        public const string RequiredPrice = "Введите цену товара";
         public const string InvalidQuantity = "Количество должно быть больше нуля";
+        public const string InvalidWeight = "Вес должен быть в диапазоне от 0 до 1";
+        public const string InvalidProba = "Проба должна быть в диапазоне от 300 до 1000";
         public const string InvalidLength = "Превышена допустимая длина поля";
         public const string PasswordsDoNotMatch = "Пароли не совпадают";
         public const string InvalidImageType = "Разрешены только изображения (jpg, jpeg, png)";

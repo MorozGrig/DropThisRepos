@@ -15,7 +15,8 @@ namespace DropThisSite.Models
         [RegularExpression(ValidationPatterns.SafeTextPattern, ErrorMessage = ValidationMessages.InvalidText)]
         public string? ColorStone { get; set; }
 
-        [Required(ErrorMessage = ValidationMessages.Required), Range(0, 1)]
+        [Required(ErrorMessage = ValidationMessages.Required)]
+        [Range(typeof(float), "0", "1", ErrorMessage = ValidationMessages.InvalidWeight)]
         public float WeightStone { get; set; }
 
         public ICollection<Jewelry>? Jewelries { get; set; }

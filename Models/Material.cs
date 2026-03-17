@@ -12,7 +12,8 @@ namespace DropThisSite.Models
         [RegularExpression(ValidationPatterns.SafeTextPattern, ErrorMessage = ValidationMessages.InvalidText)]
         public string? NameMaterial { get; set; }
 
-        [Required(ErrorMessage = ValidationMessages.Required), Range(300, 1000)]
+        [Required(ErrorMessage = ValidationMessages.Required)]
+        [Range(300, 1000, ErrorMessage = ValidationMessages.InvalidProba)]
         public int Proba {  get; set; }
 
         public ICollection<Jewelry>? Jewelries { get; set; }
