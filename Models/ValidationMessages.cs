@@ -14,5 +14,7 @@ namespace DropThisSite.Models
         public const string InvalidQuantity = "Количество должно быть больше нуля";
         public const string InvalidLength = "Превышена допустимая длина поля";
         public const string PasswordsDoNotMatch = "Пароли не совпадают";
+        public const string InvalidImageType = "Разрешены только изображения (jpg, jpeg, png)";
+        public const string ImageTooLarge = "Размер файла не должен превышать 5 МБ";
     }
 }
