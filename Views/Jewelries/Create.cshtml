@@ -35,7 +35,7 @@
     </div>
     <div class="col-md-6">
         <label asp-for="PriceJewelry" class="form-label">Стоимость украшения</label>
-        <input asp-for="PriceJewelry" class="form-control" />
+        <input asp-for="PriceJewelry" class="form-control" data-val-number="Введите цену товара" data-val-required="Введите цену товара" />
         <span asp-validation-for="PriceJewelry" class="text-danger"></span>
     </div>
     <div class="col-12">
