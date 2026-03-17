@@ -6,8 +6,9 @@
 
 <h1 class="h3 mb-3">Создать украшение</h1>
 <div class="card shadow-sm"><div class="card-body">
-<form asp-action="Create" class="row g-3" enctype="multipart/form-data">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<form asp-action="Create" asp-controller="Jewelries" method="post" class="row g-3" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="All" class="text-danger"></div>
     <div class="col-md-6">
         <label asp-for="NameJewelry" class="form-label">Название</label>
         <input asp-for="NameJewelry" class="form-control" />
