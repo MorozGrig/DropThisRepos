@@ -1159,7 +1159,6 @@ C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\compressed\
 C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\compressed\v0zgfp0y55-{0}-87fc7y1x7t-87fc7y1x7t.gz
 C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\compressed\yfc7ypekbg-{0}-mlv21k5csn-mlv21k5csn.gz
 C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\compressed\wev25zkxln-{0}-5lue52odrn-5lue52odrn.gz
-C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\compressed\0ypbs9qwho-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\compressed\9t5ei3t1rq-{0}-w36eqq640o-w36eqq640o.gz
 C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\compressed\vtbhnou7uw-{0}-t1cqhe9u97-t1cqhe9u97.gz
 C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\compressed\n2r8i0u4xn-{0}-c2jlpeoesf-c2jlpeoesf.gz
@@ -1235,3 +1234,4 @@ C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\DropThisSit
 C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\DropThisSite.genruntimeconfig.cache
 C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\ref\DropThisSite.dll
 S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropThisRepos\obj\Debug\net9.0\compressed\17g2fbte2l-2lab2ne7ap.gz
+C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\compressed\2ngd2hdpms-{0}-4n0s3exmto-4n0s3exmto.gz

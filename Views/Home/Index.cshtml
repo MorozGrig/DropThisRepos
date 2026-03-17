@@ -22,9 +22,13 @@
         <div class="row">
             @foreach (var item in Model)
             {
+                var imagePath = string.IsNullOrWhiteSpace(item.ImagePath)
+                ? "/images/placeholder-product.svg"
+                : item.ImagePath;
+
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm border-warning">
-                        <img src="/images/ring1.jpg" class="card-img-top" alt="@item.NameJewelry">
+                        <img src="@imagePath" class="card-img-top" alt="@item.NameJewelry">
                         <div class="card-body">
                             <h5 class="card-title">@item.NameJewelry</h5>
                             <p class="card-text text-muted">@item.Material?.NameMaterial • @item.JewelryTip?.NameJewelryTip</p>
