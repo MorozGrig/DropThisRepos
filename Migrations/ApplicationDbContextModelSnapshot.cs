@@ -42,6 +42,10 @@ namespace DropThisSite.Migrations
                     b.Property<int>("IdSupplier")
                         .HasColumnType("int");
 
+                    b.Property<string>("ImagePath")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
                     b.Property<string>("NameJewelry")
                         .IsRequired()
                         .HasMaxLength(50)
