@@ -33,7 +33,7 @@ namespace DropThisSite.Models
         [ForeignKey("IdSupplier")]
         public Supplier? Supplier { get; set; }
 
-        [Required(ErrorMessage = "Введите цену товара")]
+        [Required(ErrorMessage = ValidationMessages.RequiredPrice)]
         [Range(1, ValidationPatterns.PriceMaxValue, ErrorMessage = ValidationMessages.InvalidPrice)]
         public int PriceJewelry { get; set; }
 

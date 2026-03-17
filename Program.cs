@@ -1,15 +1,22 @@
+using System.Globalization;
 using DropThisSite.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
 builder.Services.AddControllersWithViews(options =>
 {
-    options.ModelBindingMessageProvider.SetValueIsInvalidAccessor(_ => "Введено некорректное значение");
+    options.ModelBindingMessageProvider.SetValueIsInvalidAccessor(_ => "Некорректное значение");
     options.ModelBindingMessageProvider.SetValueMustBeANumberAccessor(_ => "Поле должно быть числом");
-    options.ModelBindingMessageProvider.SetAttemptedValueIsInvalidAccessor((value, field) => $"Значение \"{value}\" недопустимо для поля {field}");
-});
+    options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(_ => "Поле обязательно для заполнения");
+    options.ModelBindingMessageProvider.SetAttemptedValueIsInvalidAccessor((value, field) => $"Значение \"{value}\" недопустимо для поля «{field}»");
+})
+.AddViewLocalization()
+.AddDataAnnotationsLocalization();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => {
@@ -24,6 +31,14 @@ builder.Services.AddSession(options =>
 });
 
 var app = builder.Build();
+
+var supportedCultures = new[] { new CultureInfo("ru-RU") };
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture("ru-RU"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+});
 
 using (var scope = app.Services.CreateScope())
 {
