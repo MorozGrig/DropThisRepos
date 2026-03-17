@@ -15,245 +15,243 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.TargetFrameworkIdentifier = .NETCoreApp
-build_property.TargetFrameworkVersion = v9.0
 build_property.RootNamespace = DropThisSite
 build_property.RootNamespace = DropThisSite
-build_property.ProjectDir = C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\
+build_property.ProjectDir = S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropThisRepos\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos
+build_property.MSBuildProjectDirectory = S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropThisRepos
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Account/Login.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Account/Profile.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Account/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Account/Register.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/AdminOrders/Index.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/AdminOrders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5PcmRlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Admin/Index.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Home/Cart.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Home/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Home/Checkout.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Home/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Home/CheckoutProcess.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Home/CheckoutProcess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja291dFByb2Nlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Home/Index.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Home/Privacy.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Jewelries/Create.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Jewelries/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxyaWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Jewelries/Delete.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Jewelries/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxyaWVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Jewelries/Details.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Jewelries/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxyaWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Jewelries/Edit.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Jewelries/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxyaWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Jewelries/Index.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Jewelries/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxyaWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/JewelryTips/Create.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/JewelryTips/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxyeVRpcHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/JewelryTips/Delete.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/JewelryTips/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxyeVRpcHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/JewelryTips/Details.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/JewelryTips/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxyeVRpcHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/JewelryTips/Edit.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/JewelryTips/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxyeVRpcHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/JewelryTips/Index.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/JewelryTips/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxyeVRpcHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Materials/Create.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Materials/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Materials/Delete.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Materials/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Materials/Details.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Materials/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Materials/Edit.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Materials/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Materials/Index.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Materials/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Orders/Create.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Orders/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Orders/Delete.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Orders/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Orders/Details.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Orders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Orders/Edit.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Orders/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Orders/History.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Orders/History.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Orders/Index.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Roles/Create.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Roles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Roles/Delete.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Roles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Roles/Details.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Roles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Roles/Edit.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Roles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Roles/Index.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Roles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Shared/Error.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Shared/_AdminLayout.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Shared/_ValidationScriptsPartial.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Stones/Create.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Stones/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvbmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Stones/Delete.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Stones/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvbmVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Stones/Details.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Stones/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvbmVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Stones/Edit.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Stones/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvbmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Stones/Index.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Stones/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvbmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Suppliers/Create.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Suppliers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Suppliers/Delete.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Suppliers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Suppliers/Details.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Suppliers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Suppliers/Edit.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Suppliers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Suppliers/Index.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Suppliers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Users/Create.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Users/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Users/Delete.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Users/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Users/Details.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Users/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Users/Edit.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Users/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Users/Index.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/_ViewImports.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/_ViewStart.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FREED/Desktop/Lern/MorozGrig/DropThisRepos/Views/Shared/_Layout.cshtml]
+[S:/USERS/53-04k/Мороз Григорий Игоревич/УЧПРАК/DropThisRepos/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-vg2fho67u3

@@ -85,7 +85,7 @@ namespace DropThisSite.Data
                 context.SaveChanges();
             }
 
-            // 7. Jewelries (ПОСЛЕ всех зависимостей!)
+            // 7. Jewelries
             if (!context.Jewelries.Any())
             {
                 try

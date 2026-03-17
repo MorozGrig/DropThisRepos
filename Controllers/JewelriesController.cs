@@ -112,12 +112,14 @@ namespace DropThisSite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdJewelry,NameJewelry,IdJewelryTip,IdMaterial,IdStone,IdSupplier,PriceJewelry")] Jewelry jewelry)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 _context.Add(jewelry);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            //else { ViewBag.Error = "Логин или адрес электронной почты уже используется"; }
+               
             ViewData["IdJewelryTip"] = new SelectList(_context.JewelryTips, "IdJewelryTip", "NameJewelryTip", jewelry.IdJewelryTip);
             ViewData["IdMaterial"] = new SelectList(_context.Materials, "IdMaterial", "NameMaterial", jewelry.IdMaterial);
             ViewData["IdStone"] = new SelectList(_context.Stones, "IdStone", "NameStone", jewelry.IdStone);
