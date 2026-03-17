@@ -115,24 +115,24 @@ namespace DropThisSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdJewelry,NameJewelry,IdJewelryTip,IdMaterial,IdStone,IdSupplier,PriceJewelry")] Jewelry jewelry, IFormFile? imageFile)
+        public async Task<IActionResult> Create([Bind("NameJewelry,IdJewelryTip,IdMaterial,IdStone,IdSupplier,PriceJewelry")] Jewelry model, IFormFile? imageFile)
         {
             if (!ValidateImage(imageFile))
             {
-                PopulateSelectLists(jewelry);
-                return View(jewelry);
+                PopulateSelectLists(model);
+                return View(model);
             }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                jewelry.ImagePath = await SaveImageAsync(imageFile);
-                _context.Add(jewelry);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                PopulateSelectLists(model);
+                return View(model);
             }
 
-            PopulateSelectLists(jewelry);
-            return View(jewelry);
+            model.ImagePath = await SaveImageAsync(imageFile);
+            _context.Add(model);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> Edit(int? id)

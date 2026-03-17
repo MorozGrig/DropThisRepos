@@ -6,7 +6,7 @@ namespace DropThisSite.Models
     public class Jewelry
     {
         [Key]
-        [Range(1, int.MaxValue, ErrorMessage = ValidationMessages.InvalidSelection)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdJewelry { get; set; }
 
         [Required(ErrorMessage = ValidationMessages.Required), StringLength(ValidationPatterns.ShortTextMaxLength)]
