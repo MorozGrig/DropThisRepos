@@ -337,7 +337,6 @@ S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropTh
 S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropThisRepos\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropThisRepos\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
 S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropThisRepos\obj\Debug\net9.0\compressed\3a7umsrwji-5lue52odrn.gz
-S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropThisRepos\obj\Debug\net9.0\compressed\17g2fbte2l-61n19gt1b8.gz
 S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropThisRepos\obj\Debug\net9.0\compressed\s06y0s631c-w36eqq640o.gz
 S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropThisRepos\obj\Debug\net9.0\compressed\etq93fi2ye-t1cqhe9u97.gz
 S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropThisRepos\obj\Debug\net9.0\compressed\xild4h4oog-c2jlpeoesf.gz
@@ -1235,3 +1234,4 @@ C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\refint\Drop
 C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\DropThisSite.pdb
 C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\DropThisSite.genruntimeconfig.cache
 C:\Users\FREED\Desktop\Lern\MorozGrig\DropThisRepos\obj\Debug\net9.0\ref\DropThisSite.dll
+S:\USERS\53-04k\Мороз Григорий Игоревич\УЧПРАК\DropThisRepos\obj\Debug\net9.0\compressed\17g2fbte2l-2lab2ne7ap.gz
