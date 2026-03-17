@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="Нет изображения">
+  <rect width="400" height="300" fill="#f3f4f6"/>
+  <rect x="30" y="30" width="340" height="240" rx="14" fill="#e5e7eb"/>
+  <circle cx="140" cy="120" r="28" fill="#9ca3af"/>
+  <path d="M70 220l75-70 55 50 40-35 90 55H70z" fill="#9ca3af"/>
+  <text x="200" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#6b7280">Нет изображения</text>
+</svg>

@@ -19,7 +19,7 @@ namespace DropThisSite.Models
         public JewelryTip? JewelryTip { get; set; }
 
         [Range(1, int.MaxValue, ErrorMessage = ValidationMessages.InvalidSelection)]
-        public int IdMaterial {  get; set; }
+        public int IdMaterial { get; set; }
         [ForeignKey("IdMaterial")]
         public Material? Material { get; set; }
 
@@ -33,8 +33,12 @@ namespace DropThisSite.Models
         [ForeignKey("IdSupplier")]
         public Supplier? Supplier { get; set; }
 
-        [Required(ErrorMessage = ValidationMessages.Required), Range(1, ValidationPatterns.PriceMaxValue, ErrorMessage = ValidationMessages.InvalidPrice)]
+        [Required(ErrorMessage = "Введите цену товара")]
+        [Range(1, ValidationPatterns.PriceMaxValue, ErrorMessage = ValidationMessages.InvalidPrice)]
         public int PriceJewelry { get; set; }
+
+        [StringLength(255, ErrorMessage = ValidationMessages.InvalidLength)]
+        public string? ImagePath { get; set; }
 
         public ICollection<Order>? Orders { get; set; }
 
