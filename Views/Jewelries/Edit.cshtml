@@ -6,7 +6,7 @@
 
 <h1 class="h3 mb-3">Редактировать украшение</h1>
 <div class="card shadow-sm"><div class="card-body">
-<form asp-action="Edit" class="row g-3">
+<form asp-action="Edit" class="row g-3" enctype="multipart/form-data">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="IdJewelry" />
     <div class="col-md-6">
@@ -38,6 +38,18 @@
         <label asp-for="PriceJewelry" class="form-label">Стоимость украшения</label>
         <input asp-for="PriceJewelry" class="form-control" />
         <span asp-validation-for="PriceJewelry" class="text-danger"></span>
+    </div>
+    <div class="col-12">
+        <label class="form-label d-block">Текущее изображение</label>
+        <img src="@(string.IsNullOrWhiteSpace(Model.ImagePath) ? "/images/placeholder-product.svg" : Model.ImagePath)"
+             alt="@Model.NameJewelry"
+             style="width: 180px; height: 180px; object-fit: cover; border-radius: 8px;" />
+    </div>
+    <div class="col-12">
+        <label for="imageFile" class="form-label">Заменить изображение</label>
+        <input type="file" id="imageFile" name="imageFile" class="form-control" accept=".jpg,.jpeg,.png,image/jpeg,image/png" />
+        <div class="form-text">Разрешены только JPG/JPEG/PNG, размер до 5 МБ.</div>
+        <span class="text-danger">@Html.ValidationMessage("imageFile")</span>
     </div>
     <div class="col-12 d-flex gap-2">
         <button type="submit" class="btn btn-primary">Сохранить</button>
