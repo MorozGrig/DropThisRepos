@@ -36,7 +36,7 @@
 
 
 
-            @if (User.IsInRole("Админ"))
+            @if (User.FindFirst("IdRole")?.Value == "2")
             {
                 <div class="mt-3">
                     <a asp-action="Edit" asp-route-id="@Model.IdJewelry" class="btn btn-outline-primary btn-sm">Редактировать товар</a>

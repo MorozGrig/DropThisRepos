@@ -38,7 +38,8 @@ namespace DropThisSite.Controllers
                 {
                     new Claim(ClaimTypes.Name, user.Login ?? string.Empty),
                     new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
-                    new Claim("UserId", user.IdUser.ToString())
+                    new Claim("UserId", user.IdUser.ToString()),
+                    new Claim("IdRole", user.IdRole.ToString())
                 };
 
                 if (user.Role != null)
