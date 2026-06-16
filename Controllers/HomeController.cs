@@ -3,8 +3,13 @@ using DropThisSite.Models;
 using DropThisSite.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using QRCoder;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Text.Json;
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
 
 namespace DropThisSite.Controllers
 {
@@ -249,13 +254,82 @@ namespace DropThisSite.Controllers
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
 
+            string qrText =
+            $@"Заказ №{order.IdOrder}
+            Дата: {order.OrderDate:dd.MM.yyyy HH:mm}
+            Сумма: {order.TotalPrice} ₽";
+
+            var qrGenerator = new QRCodeGenerator();
+            var qrData = qrGenerator.CreateQrCode(qrText, QRCodeGenerator.ECCLevel.Q);
+
+            var qrCode = new PngByteQRCode(qrData);
+            byte[] qrBytes = qrCode.GetGraphic(20);
+
             HttpContext.Session.Remove("Cart");
 
             ViewBag.OrderCount = totalQuantity;
             ViewBag.TotalPrice = totalPrice;
+            ViewBag.OrderId = order.IdOrder;
             return View();
         }
 
+        private byte[] GenerateReceipt(Order order, byte[] qrBytes)
+        {
+            return Document.Create(container =>
+            {
+                container.Page(page =>
+                {
+                    page.Margin(30);
+
+                    page.Content().Column(col =>
+                    {
+                        col.Item().Text("ЧЕК").FontSize(24).Bold();
+
+                        col.Item().Text($"Заказ №{order.IdOrder}");
+                        col.Item().Text($"Дата: {order.OrderDate:dd.MM.yyyy HH:mm}");
+                        col.Item().Text($"Получатель: {order.CustomerName}");
+                        col.Item().Text($"Телефон: {order.CustomerPhone}");
+                        col.Item().Text($"Сумма: {order.TotalPrice} ₽");
+
+                        col.Item().PaddingTop(20);
+
+                        col.Item().Image(qrBytes);
+                    });
+                });
+            }).GeneratePdf();
+        }
+
+        public async Task<IActionResult> DownloadReceipt(int id)
+        {
+            var order = await _context.Orders
+                .FirstOrDefaultAsync(o => o.IdOrder == id);
+
+            if (order == null)
+                return NotFound();
+
+            string qrText =
+            $@"Заказ №{order.IdOrder}
+            Дата: {order.OrderDate:dd.MM.yyyy HH:mm}
+            Получатель: {order.CustomerName}
+            Телефон: {order.CustomerPhone}
+            Сумма: {order.TotalPrice} ₽";
+
+            var qrGenerator = new QRCodeGenerator();
+            var qrData = qrGenerator.CreateQrCode(
+                qrText,
+                QRCodeGenerator.ECCLevel.Q);
+
+            var qrCode = new PngByteQRCode(qrData);
+
+            byte[] qrBytes = qrCode.GetGraphic(20);
+
+            var pdfBytes = GenerateReceipt(order, qrBytes);
+
+            return File(
+                pdfBytes,
+                "application/pdf",
+                $"Receipt_{id}.pdf");
+        }
 
         private void SetYandexApiKey()
         {
