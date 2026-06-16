@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cu7uv983tnE=",
+  "dgSpecHash": "wcGSoezomLA=",
   "success": true,
   "projectFilePath": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\DropThisSite.csproj",
   "expectedPackageFiles": [
@@ -177,5 +177,15 @@
     "C:\\Users\\FREED\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\FREED\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://api.nuget.org/v3/index.json.",
+      "projectPath": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\DropThisSite.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\FREED\\Desktop\\Lern\\MorozGrig\\DropThisRepos\\DropThisSite.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

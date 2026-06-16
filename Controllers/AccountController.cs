@@ -75,7 +75,7 @@ namespace DropThisSite.Controllers
                 Email = model.Email,
                 Phone = model.Phone,
                 Password = model.Password,
-                IdRole = 2
+                IdRole = 1
             };
 
             _context.Users.Add(user);
