@@ -9,7 +9,7 @@ namespace DropThisSite.Controllers
     public class AdminController : Controller
     {
         private const int AdminRoleId = 2;
-        private const string ExternalAdminApplicationPath = @"C:\DropThis\AdminPanel\DropThisAdmin.exe";
+        private const string ExternalAdminApplicationPath = @"C:\Users\FREED\source\repos\JewelryStore\JewelryStore\bin\Release\JewelryStore.exe";
 
         public IActionResult Launch()
         {
