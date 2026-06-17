@@ -4,6 +4,7 @@ using DropThisSite.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DropThisSite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260617025923_finally1234")]
+    partial class finally1234
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -174,9 +177,6 @@ namespace DropThisSite.Migrations
                     b.Property<int?>("IdJewelry")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdSposobOplati")
-                        .HasColumnType("int");
-
                     b.Property<int>("IdStatusOrder")
                         .HasColumnType("int");
 
@@ -195,8 +195,6 @@ namespace DropThisSite.Migrations
                     b.HasKey("IdOrder");
 
                     b.HasIndex("IdJewelry");
-
-                    b.HasIndex("IdSposobOplati");
 
                     b.HasIndex("IdStatusOrder");
 
@@ -253,24 +251,6 @@ namespace DropThisSite.Migrations
                     b.HasKey("IdRole");
 
                     b.ToTable("Roles");
-                });
-
-            modelBuilder.Entity("DropThisSite.Models.SposobOplati", b =>
-                {
-                    b.Property<int>("IdSposobOplati")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdSposobOplati"));
-
-                    b.Property<string>("NameSposobOplati")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("IdSposobOplati");
-
-                    b.ToTable("SposobiOplati");
                 });
 
             modelBuilder.Entity("DropThisSite.Models.StatusOrder", b =>
@@ -479,12 +459,6 @@ namespace DropThisSite.Migrations
                         .WithMany("Orders")
                         .HasForeignKey("IdJewelry");
 
-                    b.HasOne("DropThisSite.Models.SposobOplati", "SposobOplati")
-                        .WithMany("Orders")
-                        .HasForeignKey("IdSposobOplati")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("DropThisSite.Models.StatusOrder", "StatusOrder")
                         .WithMany("Orders")
                         .HasForeignKey("IdStatusOrder")
@@ -498,8 +472,6 @@ namespace DropThisSite.Migrations
                         .IsRequired();
 
                     b.Navigation("Jewelry");
-
-                    b.Navigation("SposobOplati");
 
                     b.Navigation("StatusOrder");
 
@@ -600,11 +572,6 @@ namespace DropThisSite.Migrations
             modelBuilder.Entity("DropThisSite.Models.Role", b =>
                 {
                     b.Navigation("Users");
-                });
-
-            modelBuilder.Entity("DropThisSite.Models.SposobOplati", b =>
-                {
-                    b.Navigation("Orders");
                 });
 
             modelBuilder.Entity("DropThisSite.Models.StatusOrder", b =>

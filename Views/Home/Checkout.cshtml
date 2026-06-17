@@ -38,6 +38,37 @@
                 </div>
 
                 <div class="mb-3">
+                    <label class="form-label fw-bold">СПОСОБ ОПЛАТЫ</label>
+                    <div class="form-text mb-2">Выберите удобный для вас способ оплаты</div>
+
+                    @{
+                        var sposobyOplaty = ViewBag.SposobyOplati as IEnumerable<DropThisSite.Models.SposobOplati>
+                                            ?? Enumerable.Empty<DropThisSite.Models.SposobOplati>();
+                    }
+
+                    @foreach (var so in sposobyOplaty)
+                    {
+                        <div class="form-check mb-2">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   asp-for="IdSposobOplati"
+                                   value="@so.IdSposobOplati"
+                                   id="so_@so.IdSposobOplati" />
+                            <label class="form-check-label" for="so_@so.IdSposobOplati">
+                                @so.NameSposobOplati
+                            </label>
+                        </div>
+                    }
+
+                    @if (!sposobyOplaty.Any())
+                    {
+                        <div class="alert alert-warning">Способы оплаты не настроены.</div>
+                    }
+
+                    <span asp-validation-for="IdSposobOplati" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
                     <label asp-for="Address" class="form-label fw-bold">Адрес доставки</label>
                     <input asp-for="Address" id="selectedAddress" class="form-control" autocomplete="off" />
                     <div class="form-text">Введите адрес вручную, выберите из подсказки или кликните на карту.</div>

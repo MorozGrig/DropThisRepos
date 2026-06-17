@@ -26,5 +26,9 @@ namespace DropThisSite.Models.ViewModels
         public string? AddressCoordinates { get; set; }
 
         public bool IsAddressVerified { get; set; }
+
+        [Required(ErrorMessage = ValidationMessages.Required)]
+        [Display(Name = "Способ оплаты")]
+        public int IdSposobOplati { get; set; }
     }
 }

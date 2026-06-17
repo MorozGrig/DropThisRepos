@@ -43,5 +43,7 @@ namespace DropThisSite.Models
         public ICollection<Order>? Orders { get; set; }
 
         public ICollection<OrderItem>? OrderItems { get; set; }
+
+        public ICollection<WarehouseItem>? WarehouseItems { get; set; }
     }
 }

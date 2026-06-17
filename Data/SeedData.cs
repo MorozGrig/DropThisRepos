@@ -73,15 +73,46 @@ namespace DropThisSite.Data
                 context.SaveChanges();
             }
 
+            if (!context.ColorsStounes.Any())
+            {
+                context.ColorsStounes.AddRange(
+                    new ColorStoune { ColorStone = "Белый" },
+                    new ColorStoune { ColorStone = "Красный" },
+                    new ColorStoune { ColorStone = "Прозрачный" }
+                );
+                context.SaveChanges();
+            }
+
             // 6. Stones
             if (!context.Stones.Any())
             {
                 context.Stones.AddRange(
-                    new Stone { NameStone = "Бриллиант", ColorStone = "Прозрачный", WeightStone = 0.3F },
-                    new Stone { NameStone = "Рубин", ColorStone = "Красный", WeightStone = 0.5F },
-                    new Stone { NameStone = "Сапфир", ColorStone = "Синий", WeightStone = 0.45F },
-                    new Stone { NameStone = "Без камня", ColorStone = "", WeightStone = 0F }
+                    new Stone { NameStone = "Бриллиант", IdColorStone = 1, WeightStone = 0.3F },
+                    new Stone { NameStone = "Рубин", IdColorStone = 2, WeightStone = 0.5F },
+                    new Stone { NameStone = "Сапфир", IdColorStone = 2, WeightStone = 0.45F },
+                    new Stone { NameStone = "Без камня", IdColorStone = 3, WeightStone = 0F }
                 );
+                context.SaveChanges();
+            }
+
+            if (!context.Warehouses.Any())
+            {
+                context.Warehouses.AddRange(
+                    new Warehouse { NameWarehouse = "Основной склад" },
+                    new Warehouse { NameWarehouse = "Склад Санкт-Петербург" }
+                );
+
+                context.SaveChanges();
+            }
+
+            if (!context.SposobiOplati.Any())
+            {
+                context.SposobiOplati.AddRange(
+                    new SposobOplati { NameSposobOplati = "СБП"},
+                    new SposobOplati { NameSposobOplati = "Банковская карта" },
+                    new SposobOplati { NameSposobOplati = "Наличными курьеру" }
+                );
+
                 context.SaveChanges();
             }
 
@@ -110,6 +141,25 @@ namespace DropThisSite.Data
                 {
                     Console.WriteLine($"❌ Ошибка Jewelries: {ex.Message}");
                 }
+            }
+
+            if (!context.WarehouseItems.Any())
+            {
+                context.WarehouseItems.AddRange(
+                    new WarehouseItem { IdWarehouse = 1, IdJewelry = 1, Quantity = 15 },
+                    new WarehouseItem { IdWarehouse = 1, IdJewelry = 2, Quantity = 20},
+                    new WarehouseItem { IdWarehouse = 1, IdJewelry = 3, Quantity = 8},
+                    new WarehouseItem { IdWarehouse = 1, IdJewelry = 4, Quantity = 12},
+                    new WarehouseItem { IdWarehouse = 1, IdJewelry = 5, Quantity = 50 },
+                    new WarehouseItem { IdWarehouse = 1, IdJewelry = 6, Quantity = 50 },
+                    new WarehouseItem { IdWarehouse = 2, IdJewelry = 7, Quantity = 50 },
+                    new WarehouseItem { IdWarehouse = 2, IdJewelry = 8, Quantity = 50 },
+                    new WarehouseItem { IdWarehouse = 2, IdJewelry = 9, Quantity = 75 },
+                    new WarehouseItem { IdWarehouse = 2, IdJewelry = 10, Quantity = 63 },
+                    new WarehouseItem { IdWarehouse = 2, IdJewelry = 11, Quantity = 18 }
+                );
+
+                context.SaveChanges();
             }
         }
     }

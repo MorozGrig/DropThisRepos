@@ -55,17 +55,17 @@
                                         }
                                         @if (item.Jewelry?.Stone != null)
                                         {
-                                            <span> · @item.Jewelry.Stone.ColorStone</span>
+                                            <span> · @item.Jewelry.Stone.IdColorStone</span>
                                         }
                                     </div>
                                 </div>
                             }
                         </div>
                         <div class="col-md-5">
-                            <p><strong>Получатель:</strong> @(order.CustomerName ?? order.User?.Login)</p>
-                            <p><strong>Телефон:</strong> @(order.CustomerPhone ?? order.User?.Phone)</p>
-                            <p><strong>Email:</strong> @(order.CustomerEmail ?? order.User?.Email)</p>
-                            <p><strong>Адрес доставки:</strong> @(order.DeliveryAddress ?? "Не указан")</p>
+                            <p><strong>Получатель:</strong> @(order.Deliveries?.CustomerName ?? order.User?.Login)</p>
+                            <p><strong>Телефон:</strong> @(order.Deliveries?.CustomerPhone ?? order.User?.Phone)</p>
+                            <p><strong>Email:</strong> @(order.Deliveries?.CustomerEmail ?? order.User?.Email)</p>
+                            <p><strong>Адрес доставки:</strong> @(order.Deliveries?.DeliveryAddress ?? "Не указан")</p>
                         </div>
                     </div>
                 </div>

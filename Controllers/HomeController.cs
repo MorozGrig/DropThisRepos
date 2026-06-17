@@ -173,6 +173,9 @@ namespace DropThisSite.Controllers
             if (cart.Count == 0)
                 return RedirectToAction("Cart");
 
+            var sposobyOplaty = _context.SposobiOplati.OrderBy(p => p.NameSposobOplati).ToList();
+
+            ViewBag.SposobyOplati = sposobyOplaty;
             ViewBag.CartIds = cart;
             SetCheckoutSummary(cart);
             SetYandexApiKey();
@@ -211,6 +214,7 @@ namespace DropThisSite.Controllers
 
             if (!ModelState.IsValid)
             {
+                ViewBag.SposobyOplati = _context.SposobiOplati.OrderBy(p => p.NameSposobOplati).ToList();
                 return View("Checkout", model);
             }
 
@@ -235,13 +239,10 @@ namespace DropThisSite.Controllers
                 IdUser = userId,
                 IdJewelry = null,
                 IdStatusOrder = 1,
+                IdSposobOplati = model.IdSposobOplati,
                 OrderDate = DateTime.Now,
                 Quantity = totalQuantity,
                 TotalPrice = totalPrice,
-                CustomerName = model.Name,
-                CustomerPhone = model.Phone,
-                CustomerEmail = model.Email,
-                DeliveryAddress = model.Address,
                 OrderItems = cartItems.Select(item => new OrderItem
                 {
                     IdJewelry = item.IdJewelry,
@@ -250,8 +251,20 @@ namespace DropThisSite.Controllers
                     TotalPrice = item.PriceJewelry * groupedCart[item.IdJewelry]
                 }).ToList()
             };
-
             _context.Orders.Add(order);
+            await _context.SaveChangesAsync();
+
+
+            var delivery = new Delivery
+            {
+                IdOrder = order.IdOrder,
+                CustomerName = model.Name,
+                CustomerPhone = model.Phone,
+                CustomerEmail = model.Email,
+                DeliveryAddress = model.Address,
+            };
+
+            _context.Deliveries.Add(delivery);
             await _context.SaveChangesAsync();
 
             string qrText =
@@ -273,7 +286,7 @@ namespace DropThisSite.Controllers
             return View();
         }
 
-        private byte[] GenerateReceipt(Order order, byte[] qrBytes)
+        private byte[] GenerateReceipt(Order order, Delivery delivery, byte[] qrBytes)
         {
             return Document.Create(container =>
             {
@@ -287,8 +300,8 @@ namespace DropThisSite.Controllers
 
                         col.Item().Text($"Заказ №{order.IdOrder}");
                         col.Item().Text($"Дата: {order.OrderDate:dd.MM.yyyy HH:mm}");
-                        col.Item().Text($"Получатель: {order.CustomerName}");
-                        col.Item().Text($"Телефон: {order.CustomerPhone}");
+                        col.Item().Text($"Получатель: {delivery.CustomerName}");
+                        col.Item().Text($"Телефон: {delivery.CustomerPhone}");
                         col.Item().Text($"Сумма: {order.TotalPrice} ₽");
 
                         col.Item().PaddingTop(20);
@@ -307,11 +320,17 @@ namespace DropThisSite.Controllers
             if (order == null)
                 return NotFound();
 
+            var delivery = await _context.Deliveries
+                .FirstOrDefaultAsync(d => d.IdDelivery == id);
+
+            if (delivery == null)
+                return NotFound();
+
             string qrText =
             $@"Заказ №{order.IdOrder}
             Дата: {order.OrderDate:dd.MM.yyyy HH:mm}
-            Получатель: {order.CustomerName}
-            Телефон: {order.CustomerPhone}
+            Получатель: {delivery.CustomerName}
+            Телефон: {delivery.CustomerPhone}
             Сумма: {order.TotalPrice} ₽";
 
             var qrGenerator = new QRCodeGenerator();
@@ -323,7 +342,7 @@ namespace DropThisSite.Controllers
 
             byte[] qrBytes = qrCode.GetGraphic(20);
 
-            var pdfBytes = GenerateReceipt(order, qrBytes);
+            var pdfBytes = GenerateReceipt(order, delivery, qrBytes);
 
             return File(
                 pdfBytes,

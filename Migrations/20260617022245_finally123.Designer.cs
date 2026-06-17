@@ -4,6 +4,7 @@ using DropThisSite.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DropThisSite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260617022245_finally123")]
+    partial class finally123
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -174,9 +177,6 @@ namespace DropThisSite.Migrations
                     b.Property<int?>("IdJewelry")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdSposobOplati")
-                        .HasColumnType("int");
-
                     b.Property<int>("IdStatusOrder")
                         .HasColumnType("int");
 
@@ -195,8 +195,6 @@ namespace DropThisSite.Migrations
                     b.HasKey("IdOrder");
 
                     b.HasIndex("IdJewelry");
-
-                    b.HasIndex("IdSposobOplati");
 
                     b.HasIndex("IdStatusOrder");
 
@@ -253,24 +251,6 @@ namespace DropThisSite.Migrations
                     b.HasKey("IdRole");
 
                     b.ToTable("Roles");
-                });
-
-            modelBuilder.Entity("DropThisSite.Models.SposobOplati", b =>
-                {
-                    b.Property<int>("IdSposobOplati")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdSposobOplati"));
-
-                    b.Property<string>("NameSposobOplati")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("IdSposobOplati");
-
-                    b.ToTable("SposobiOplati");
                 });
 
             modelBuilder.Entity("DropThisSite.Models.StatusOrder", b =>
@@ -383,50 +363,6 @@ namespace DropThisSite.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("DropThisSite.Models.Warehouse", b =>
-                {
-                    b.Property<int>("IdWarehouse")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdWarehouse"));
-
-                    b.Property<string>("NameWarehouse")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("IdWarehouse");
-
-                    b.ToTable("Warehouses");
-                });
-
-            modelBuilder.Entity("DropThisSite.Models.WarehouseItem", b =>
-                {
-                    b.Property<int>("IdWarehouseItem")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdWarehouseItem"));
-
-                    b.Property<int>("IdJewelry")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdWarehouse")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("IdWarehouseItem");
-
-                    b.HasIndex("IdJewelry");
-
-                    b.HasIndex("IdWarehouse");
-
-                    b.ToTable("WarehouseItems");
-                });
-
             modelBuilder.Entity("DropThisSite.Models.Delivery", b =>
                 {
                     b.HasOne("DropThisSite.Models.Order", "Order")
@@ -479,12 +415,6 @@ namespace DropThisSite.Migrations
                         .WithMany("Orders")
                         .HasForeignKey("IdJewelry");
 
-                    b.HasOne("DropThisSite.Models.SposobOplati", "SposobOplati")
-                        .WithMany("Orders")
-                        .HasForeignKey("IdSposobOplati")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("DropThisSite.Models.StatusOrder", "StatusOrder")
                         .WithMany("Orders")
                         .HasForeignKey("IdStatusOrder")
@@ -498,8 +428,6 @@ namespace DropThisSite.Migrations
                         .IsRequired();
 
                     b.Navigation("Jewelry");
-
-                    b.Navigation("SposobOplati");
 
                     b.Navigation("StatusOrder");
 
@@ -547,25 +475,6 @@ namespace DropThisSite.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("DropThisSite.Models.WarehouseItem", b =>
-                {
-                    b.HasOne("DropThisSite.Models.Jewelry", "Jewelry")
-                        .WithMany("WarehouseItems")
-                        .HasForeignKey("IdJewelry")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DropThisSite.Models.Warehouse", "Warehouse")
-                        .WithMany("WarehouseItems")
-                        .HasForeignKey("IdWarehouse")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Jewelry");
-
-                    b.Navigation("Warehouse");
-                });
-
             modelBuilder.Entity("DropThisSite.Models.ColorStoune", b =>
                 {
                     b.Navigation("Stones");
@@ -576,8 +485,6 @@ namespace DropThisSite.Migrations
                     b.Navigation("OrderItems");
 
                     b.Navigation("Orders");
-
-                    b.Navigation("WarehouseItems");
                 });
 
             modelBuilder.Entity("DropThisSite.Models.JewelryTip", b =>
@@ -602,11 +509,6 @@ namespace DropThisSite.Migrations
                     b.Navigation("Users");
                 });
 
-            modelBuilder.Entity("DropThisSite.Models.SposobOplati", b =>
-                {
-                    b.Navigation("Orders");
-                });
-
             modelBuilder.Entity("DropThisSite.Models.StatusOrder", b =>
                 {
                     b.Navigation("Orders");
@@ -625,11 +527,6 @@ namespace DropThisSite.Migrations
             modelBuilder.Entity("DropThisSite.Models.User", b =>
                 {
                     b.Navigation("Orders");
-                });
-
-            modelBuilder.Entity("DropThisSite.Models.Warehouse", b =>
-                {
-                    b.Navigation("WarehouseItems");
                 });
 #pragma warning restore 612, 618
         }
